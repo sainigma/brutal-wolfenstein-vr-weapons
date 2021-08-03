@@ -1,0 +1,22 @@
+Model Karabine98
+{ 
+  Path "Models/Mauser/"
+  Model 0 "kar98k.md3"
+  Skin 0 "kar98k.png"
+  Scale -1.0 1.0 1.0
+  Offset 0.0 0.0 0.0
+  ZOffset -5
+
+  FrameIndex	ZK9G	A	0	0
+  FrameIndex	ZK9G	B	0	1
+  FrameIndex	ZK9G	C	0	2
+  FrameIndex	ZK9G	D	0	3
+  FrameIndex	ZK9G	E	0	4
+  FrameIndex	ZK9G	F	0	5
+
+  FrameIndex  ZK9R    A   0   6
+  FrameIndex  ZK9R    B   0   7
+  FrameIndex  ZK9R    C   0   8
+  FrameIndex  ZK9R    D   0   9
+  FrameIndex  ZK9R    E   0   10
+}

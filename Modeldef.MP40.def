@@ -1,0 +1,60 @@
+Model SecretWeapon_MP40				
+{ 
+  Path "Models/MP40/"
+  Model 0 "mp40.md3"
+  Skin 0 "mp40.png"
+  Scale -1.0 1.0 1.0
+  Offset 0.0 0.0 0.0
+  ZOffset -5
+
+  FrameIndex	ZMPS	A	0	1
+  FrameIndex	ZMPS	B	0	2
+  FrameIndex	ZMPS	C	0	3
+  FrameIndex	ZMPS	D	0	4
+  FrameIndex	ZMPS	E	0	5
+  FrameIndex	ZMPS	F	0	6
+  FrameIndex	ZMPS	G	0	7
+  FrameIndex	ZMPS	H	0	8
+  FrameIndex	ZMPS	I	0	9
+  FrameIndex	ZMPS	J	0	10
+  FrameIndex	ZMPS	K	0	11
+  FrameIndex	ZMPS	L	0	12
+
+  FrameIndex	ZMPG	A	0	13
+  FrameIndex	ZMPG	B	0	14
+  FrameIndex	ZMPG	C	0	15
+  FrameIndex	ZMPG	D	0	16
+  FrameIndex	ZMPG	E	0	17
+  FrameIndex	ZMPG	F	0	18
+
+  FrameIndex	ZMPR	A	0	19
+  FrameIndex	ZMPR	B	0	20
+  FrameIndex	ZMPR	C	0	21
+  FrameIndex	ZMPR	D	0	22
+  FrameIndex	ZMPR	E	0	23
+  FrameIndex	ZMPR	F	0	24
+  FrameIndex	ZMPR	G	0	25
+  FrameIndex	ZMPR	H	0	26
+  FrameIndex	ZMPR	I	0	27
+
+  FrameIndex	ZMR1	A	0	28
+  FrameIndex	ZMR1	B	0	29
+  FrameIndex	ZMR1	C	0	30
+  FrameIndex	ZMR1	D	0	31
+  FrameIndex	ZMR1	E	0	32
+  FrameIndex	ZMR1	F	0	33
+  FrameIndex	ZMR1	G	0	34
+  FrameIndex	ZMR1	H	0	35
+  FrameIndex	ZMR1	I	0	36
+  FrameIndex	ZMR1	J	0	37
+  FrameIndex	ZMR1	K	0	38
+  FrameIndex	ZMR1	L	0	39
+  FrameIndex	ZMR1	M	0	40
+  FrameIndex	ZMR1	N	0	41
+  FrameIndex	ZMR1	O	0	42
+  FrameIndex	ZMR1	P	0	43
+  FrameIndex	ZMR1	Q	0	44
+  FrameIndex	ZMR1	R	0	45
+  FrameIndex	ZMR1	S	0	46
+  FrameIndex	ZMR1	T	0	47
+}
