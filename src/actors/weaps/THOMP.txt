@@ -1,0 +1,257 @@
+Actor Thompson:Weapon {
+
+  Weapon.AmmoUse1 0
+  Weapon.AmmoGive1 30
+  Weapon.AmmoUse2 0
+  Weapon.AmmoGive2 0
+  Weapon.AmmoType1 "Clip"
+  Weapon.AmmoType2 "ThomAmmo"
+  Weapon.BobRangeX 0.75
+  Weapon.BobRangeY 0.5
+  Weapon.BobSpeed 1.5
+  Weapon.BobStyle "InverseAlpha" //Denis Belmondo's Bobstyle
+  AttackSound "None"
+  Inventory.PickUpSound "Mp40_Take"
+  Inventory.PickUpMessage "M1A1 Thompson"
+  +WEAPON.NOAUTOAIM
+  +WEAPON.NOALERT
+  +WEAPON.NOAUTOFIRE
+  Tag "M1A1 Thompson"
+  Inventory.Icon "TOMBACK" 
+
+  States {
+
+    //Sprites:
+    // ZTSA A-M, weapon intro
+    // ZTRG A-F, weapon fire
+    // ZTR2 A-H reload intro
+    // ZTR3 A-D remove magazine
+    // ZTR3 E-N insert magazine
+    // ZTR3 O-T pull charging handle
+    // ZTR3 U-X charging handle reset
+
+    Ready:
+      tnt1 a 0 a_playsound("tout")
+      ZTSA ABCDEFGHIJKLM 1
+      TNT1 A 0 A_TakeInventory("Kicking",1)
+      TNT1 A 0 A_TakeInventory("BWgrenade",1)
+      TNT1 A 0 A_TakeInventory("Meleeattack",1)
+      TNT1 A 0 A_TakeInventory("Taunting",1)
+      TNT1 A 0 A_TakeInventory("Reloading",1)
+      Goto RealReady
+
+    RealReady:
+      TNT1 A 0 A_TakeInventory("Zoomed",999)
+      ZTRG A 4 A_WeaponReady
+      TNT1 A 0 A_SetCrosshair(0)
+      TNT1 A 0 A_JumpIfInventory("ChangeMelee",1,"NewMelee")
+      TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
+      TNT1 A 0 A_JumpIfInventory("BWgrenade",1,"LaunchGrenade")
+      TNT1 A 0 A_JumpIfInventory("Meleeattack",1,"KnifeAttack")
+      TNT1 A 0 A_JumpIfInventory("Taunting",1,"Taunt")
+      Thog A 0 A_JumpIfInventory("Reloading",1,"Reload")
+      Loop
+
+    Deselect:
+      TNT1 A 0 A_TakeInventory("ChangeMelee",1)
+      TNT1 A 0 A_Takeinventory("Zoomed",1)
+      TNT1 A 0 A_Takeinventory("ADSmode",1)
+      TNT1 A 0 A_Takeinventory("Meleeattack",1)
+      TNT1 A 0 A_Takeinventory("BWgrenade",1)
+      TNT1 A 0 A_Takeinventory("Reloading",1)
+      TNT1 A 0 A_ZoomFactor(1.0)
+      ZTSA MLKJIHGFEDCBA 1
+      TNT1 A 0 A_Lower
+      Wait
+
+    Select:
+      TNT1 A 0 A_Raise
+      Wait
+
+    Fire:
+      TNT1 A 0 A_JumpIfInventory("ThomAmmo",1,1)
+      Goto Reload
+
+      TNT1 AAAA 0
+      TNT1 A 0 A_JumpIfInventory("Zoomed",1,"Fire2")
+      THOG A 0 A_AlertMonsters
+      TNT1 A 0 A_FireCustomMissile("SmokeSpawner",0,0,0,5)
+      TNT1 A 0 A_FireCustomMissile("YellowFlareSpawn",0,0,0,5)
+      TNT1 A 0 A_PlaySound("weapons/thompson")
+      ZTRG B 1 BRIGHT A_FireBullets (3, 4, -1, 15, "HitPuff")
+      TNT1 A 0 BRIGHT A_FireCustomMissile("Tracer", 0, 0, -1, 0)
+      TNT1 A 0 A_Takeinventory("ThomAmmo",1)
+      TNT1 A 0 A_GiveInventory("TommyMagCounter",1)
+      TNT1 A 0 A_SetPitch(pitch - 0.5)
+      ZTRG F 1 
+      TNT1 A 0 A_FireCustomMissile("RifleCaseSpawn",-2,0,8,0)
+      ZTRG D 1 
+      TNT1 A 0 A_Refire
+      Goto RealReady
+
+    AltFire:
+      Goto RealReady
+        
+    UnZoom:
+      Goto RealReady
+
+    NoAmmo:
+      TNT1 A 0 A_PlaySound("weapons/empty")
+      TNT1 A 0 A_Takeinventory("Zoomed",1)
+      TNT1 A 0 A_ZoomFactor(1.0)
+      TNT1 A 0 A_Takeinventory("ADSmode",1)
+      Goto RealReady
+
+    NoBug:
+      TNT1 A 0 A_WeaponReady
+      Goto RealReady
+
+    Reload:
+      TNT1 A 0 A_Takeinventory("Reloading",1)
+      TNT1 A 0 A_JumpIfInventory("ThomAmmo",30,"InsertBullets")
+      TNT1 A 0 A_JumpIfInventory("Clip",1,3)
+      Goto NoAmmo
+
+      TNT1 AAA 0
+      ZTR2 ABCDEFGH 1
+      ZTR3 ABCD 2
+      TNT1 A 0 A_FireCustomMissile("EmptyClip",-5,0,8,-4)
+      TNT1 a 0 a_playsound("thomp1")
+      ZTR3 EFGHIJKLMN 2
+      TNT1 a 0 a_playsound("thomp2")
+      TNT1 A 0 A_TakeInventory("TommyMagCounter",30)
+
+      TNT1 A 0 A_JumpIfInventory("ThomAmmo",1,"TacticalReload")
+
+      ZTR3 OPQ 2
+      ZTR3 RST 3
+      TNT1 A 0 A_PLAYSOUND("GESOO")
+      ZTR3 UVWX 3
+      
+      Goto FinishReload
+
+    TacticalReload:
+      Goto FinishReload
+
+    FinishReload:
+      ZTR2 HGFEDCBA 1
+
+    InsertBullets:
+      TNT1 A 0 A_JumpIfInventory("ThomAmmo",30,"NOBUG")
+      TNT1 A 0 A_JumpIfInventory("Clip",1,"AmmoIn")
+      Goto RealReady
+
+    AmmoIn:
+      Tnt1 a 0 a_GiveInventory("ThomAmmo",1)
+      TNT1 A 0 A_Takeinventory("Clip",1)
+      Goto InsertBullets
+
+    AmmoIn2:
+      Tnt1 a 0 a_GiveInventory("ThomAmmo",1)
+      TNT1 A 0 A_Takeinventory("Clip",1)
+      Goto InsertBullets2
+
+    InsertBullets2:
+      TNT1 A 0 A_JumpIfInventory("ThomAmmo",31,"NOBUG")
+      TNT1 A 0 A_JumpIfInventory("Clip",1,"AmmoIn2")
+      Goto RealReady
+
+    Spawn:
+      THMP A -1
+      Stop
+
+    DoKick:
+      Goto RealReady
+
+		Taunt:
+			TNT1 A 0 A_PlaySound("FUCK", 1)
+			TNT1 A 0 A_AlertMonsters
+      TNT1 A 15 A_Takeinventory("Taunting",1)
+			TNT1 A 5
+			Goto RealReady
+
+    LaunchGrenade:	
+      TNT1 A 0
+      TNT1 A 0 A_Takeinventory("Zoomed",1)
+      TNT1 A 0 A_ZoomFactor(1.0)
+      TNT1 A 0 A_TakeInventory("LaunchGrenade", 1)
+      TNT1 A 0 A_JumpIfInventory("GrenadeAmmo", 1, 1)
+      Goto NoGrenade
+      NGRA ABCD 2
+      TNT1 A 0 A_playSound("Pick/granate")
+      NGRA DD 2
+      TNT1 A 0 A_Jump(90,2)
+      TNT1 A 0 A_PlaySound("*grenadecall", CHAN_VOICE)
+      NGRA DEFG 2
+      TNT1 A 0 A_PLaySound ("Launch/granate")
+      TNT1 A 0 A_FireCustomMissile("HandGrenade2", random(-3,3), 1, 0, 0, 0, 0)
+      GRWF STUVW 2 
+      TNT1 A 0 A_TakeInventory("GrenadeAmmo", 1)
+      TNT1 A 1 
+      TNT1 A 0 A_TakeInventory("LaunchGrenade", 1)
+      TNT1 A 0 A_Takeinventory("BWgrenade",1)
+      Goto RealReady
+
+    NoGrenade:
+      TNT1 A 0
+      TNT1 A 0 A_Print("No Grenades Left!")
+      TNT1 A 0 A_Takeinventory("BWgrenade",1)
+      Goto RealReady
+
+    NewMelee:
+      Goto RealReady
+
+    NewMelee2:
+      Goto RealReady
+
+    NoAxeIn:
+      Goto RealReady
+
+    NewMelee3:
+      Goto RealReady
+
+    KnifeAttack:
+      GOTO RealREADY
+
+    AxeAttackState:
+      Goto RealReady
+
+    AxeThrowState:
+      Goto RealReady
+
+    LastThrowState:
+      Goto RealReady
+
+    NoAmmoForAxe:
+      Goto RealReady
+  }
+}
+
+
+ACTOR ThomAmmo : Ammo {
+  Inventory.Amount 0
+  Inventory.MaxAmount 31
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 31
+}
+
+ACTOR TommyMagCounter : Ammo {
+  Inventory.Amount 0
+  Inventory.MaxAmount 30
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 30
+}
+
+ACTOR MeatshieldGunAmmo : Ammo {
+  Inventory.Amount 0
+  Inventory.MaxAmount 30
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 30
+}
+
+ACTOR MeatAmmo : Ammo {
+  Inventory.Amount 0
+  Inventory.MaxAmount 100
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 100
+}

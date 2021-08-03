@@ -1,0 +1,1 @@
+gzdoom.exe -file ZMC-BWFinal.pk3 BW-VR-Weapons.zip
