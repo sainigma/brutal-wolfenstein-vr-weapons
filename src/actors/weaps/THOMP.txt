@@ -22,13 +22,13 @@ Actor Thompson:Weapon {
   States {
 
     //Sprites:
-    // ZTSA A-M, weapon intro
-    // ZTRG A-F, weapon fire
+    // ZTRG A-D, weapon fire
     // ZTR2 A-H reload intro
     // ZTR3 A-D remove magazine
     // ZTR3 E-N insert magazine
     // ZTR3 O-T pull charging handle
     // ZTR3 U-X charging handle reset
+    // ZTSA A-M, weapon intro
 
     Ready:
       tnt1 a 0 a_playsound("tout")
@@ -83,7 +83,7 @@ Actor Thompson:Weapon {
       TNT1 A 0 A_Takeinventory("ThomAmmo",1)
       TNT1 A 0 A_GiveInventory("TommyMagCounter",1)
       TNT1 A 0 A_SetPitch(pitch - 0.5)
-      ZTRG F 1 
+      ZTRG C 1 
       TNT1 A 0 A_FireCustomMissile("RifleCaseSpawn",-2,0,8,0)
       ZTRG D 1 
       TNT1 A 0 A_Refire
@@ -170,22 +170,20 @@ Actor Thompson:Weapon {
 			TNT1 A 5
 			Goto RealReady
 
-    LaunchGrenade:	
+    LaunchGrenade:
       TNT1 A 0
-      TNT1 A 0 A_Takeinventory("Zoomed",1)
-      TNT1 A 0 A_ZoomFactor(1.0)
       TNT1 A 0 A_TakeInventory("LaunchGrenade", 1)
       TNT1 A 0 A_JumpIfInventory("GrenadeAmmo", 1, 1)
       Goto NoGrenade
-      NGRA ABCD 2
+
       TNT1 A 0 A_playSound("Pick/granate")
-      NGRA DD 2
       TNT1 A 0 A_Jump(90,2)
       TNT1 A 0 A_PlaySound("*grenadecall", CHAN_VOICE)
-      NGRA DEFG 2
+
+      TNT1 AAAA 2
+
       TNT1 A 0 A_PLaySound ("Launch/granate")
       TNT1 A 0 A_FireCustomMissile("HandGrenade2", random(-3,3), 1, 0, 0, 0, 0)
-      GRWF STUVW 2 
       TNT1 A 0 A_TakeInventory("GrenadeAmmo", 1)
       TNT1 A 1 
       TNT1 A 0 A_TakeInventory("LaunchGrenade", 1)

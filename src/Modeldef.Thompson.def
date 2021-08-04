@@ -1,0 +1,51 @@
+Model Thompson				
+{ 
+  Path "Models/Thompson/"
+  Model 0 "m1a1.md3"
+  Skin 0 "m1a1.png"
+  Scale -1.0 1.0 1.0
+  Offset 0.0 0.0 0.0
+  ZOffset -5
+
+  FrameIndex      ZTRG    A       0       1
+  FrameIndex      ZTRG    B       0       2
+  FrameIndex      ZTRG    C       0       3
+  FrameIndex      ZTRG    D       0       4
+  FrameIndex      ZTRG    E       0       5
+
+  FrameIndex      ZTR2    A       0       6
+  FrameIndex      ZTR2    B       0       7
+  FrameIndex      ZTR2    C       0       8
+  FrameIndex      ZTR2    D       0       9
+  FrameIndex      ZTR2    E       0       10
+  FrameIndex      ZTR2    F       0       11
+  FrameIndex      ZTR2    G       0       12
+  FrameIndex      ZTR2    H       0       13
+
+  FrameIndex      ZTR3    A       0       14
+  FrameIndex      ZTR3    B       0       15
+  FrameIndex      ZTR3    C       0       16
+  FrameIndex      ZTR3    D       0       17
+  FrameIndex      ZTR3    E       0       18
+  FrameIndex      ZTR3    F       0       19
+  FrameIndex      ZTR3    G       0       20
+  FrameIndex      ZTR3    H       0       21
+  FrameIndex      ZTR3    I       0       22
+  FrameIndex      ZTR3    J       0       23
+  FrameIndex      ZTR3    K       0       24
+  FrameIndex      ZTR3    L       0       25
+  FrameIndex      ZTR3    M       0       26
+  FrameIndex      ZTR3    N       0       27
+  FrameIndex      ZTR3    O       0       28
+  FrameIndex      ZTR3    P       0       29
+  FrameIndex      ZTR3    Q       0       30
+  FrameIndex      ZTR3    R       0       31
+  FrameIndex      ZTR3    S       0       32
+  FrameIndex      ZTR3    T       0       33
+  FrameIndex      ZTR3    U       0       34
+  FrameIndex      ZTR3    V       0       35
+  FrameIndex      ZTR3    W       0       36
+  FrameIndex      ZTR3    X       0       37
+  FrameIndex      ZTR3    Y       0       38
+  FrameIndex      ZTR3    Z       0       39
+}

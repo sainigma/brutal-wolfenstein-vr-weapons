@@ -3,8 +3,8 @@
 ## Table of Contents
 
 - [Description](#description)
-- [Installation and Usage](#install-and-usage)
-- [Further Documentation](#further-documentation)
+- [Installation and Usage](#installation-and-usage)
+- [Documentation](#further-documentation)
 
 ## Description
 
@@ -18,16 +18,30 @@ Following weapons are supported: Luger, MP40, STG44, Kar98, MG42, Colt 1911A1, T
 
 ## Installation and Usage
 
-  1. Download the GZDoomVR project from https://github.com/hh79/gzdoomvr/releases/ and extract it
-  2. Download ZMC-BWFinal.zip from https://www.moddb.com/mods/brutal-wolfenstein-3d/downloads/zmc-bwfinal
-  3. Download BW-VR-Weapons.zip from https://github.com/sainigma/brutal-wolfenstein-vr-weapons/releases
-  4. Download brutal-wolfenstein-vr-weapons.bat from https://github.com/sainigma/brutal-wolfenstein-vr-weapons/blob/master/brutal-wolfenstein-vr-weapons.bat
-  5. Extract ZMC-BWFinal.pk3 from ZMC-BWFinal.zip to the GZDoomVR folder
-  6. BW-VR-Weapons.zip and brutal-wolfenstein-vr-weapons.bat to the GZDoomVR folder
-  6. Add original Doom wads to the GZDoomVR folder
-  7. Run brutal-wolfenstein-vr-weapons.bat
+  Downloads:
+  - GZDoomVR https://github.com/hh79/gzdoomvr/releases/
+  - ZMC-BWFinal.zip https://www.moddb.com/mods/brutal-wolfenstein-3d/downloads/zmc-bwfinal
+  - BW-VR-Weapons.zip https://github.com/sainigma/brutal-wolfenstein-vr-weapons/releases
+  - brutal-wolfenstein-vr-weapons.bat https://github.com/sainigma/brutal-wolfenstein-vr-weapons/blob/master/brutal-wolfenstein-vr-weapons.bat
 
-## Further Documentation
+  1. Extract GZDoomVR to a folder
+  2. Extract ZMC-BWFinal.**pk3** to the GZDoomVR folder
+  3. Move BW-VR-Weapons.zip and brutal-wolfenstein-vr-weapons.bat to the GZDoomVR folder
+  4. Add original Doom2 wad to the GZDoomVR folder
+
+  Your game folder should now look like:
+
+    GZDoomVR
+    ├── gzdoom.exe
+    ├── ZMC-BWFinal.pk3
+    ├── BW-VR-Weapons.zip
+    ├── brutal-wolfenstein-vr-weapons.bat
+    ├── DOOM2.WAD
+    └── ...
+
+  5. Run brutal-wolfenstein-vr-weapons.bat, start the game, modify reload keybind in in-game settings, play
+
+## Documentation
 
 If anyone else is interested in porting 3d weapons to old gzdoom-mods, here are some pointers: TODO
 

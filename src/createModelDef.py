@@ -16,6 +16,12 @@ MG42 = {
     "ZGR2":[74,97]
 }
 
+THOMP = {
+  "ZTRG":[1,5],
+  "ZTR2":[6,13],
+  "ZTR3":[14,40]
+}
+
 def generateFrames(strips):
     for strip in strips:
         j = 65
@@ -24,4 +30,4 @@ def generateFrames(strips):
             j += 1
         print("")
 
-generateFrames(MG42)
+generateFrames(THOMP)
