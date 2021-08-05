@@ -54,6 +54,20 @@ ACTOR STG44Flash {
   }
 }
 
+ACTOR ThompsonFlash {
+  Speed 10
+  PROJECTILE
+  +NOCLIP
+  +CLIENTSIDEONLY
+  
+  States {
+    Spawn:
+      TNT1 A 0
+      TNT1 A 1 A_CustomMissile("MuzzleFlash",-5,0,random(-80,-100),2,random(45,80))
+      Stop
+  }
+}
+
 ACTOR MuzzleFlash {
   renderstyle Translucent
   alpha 0.4

@@ -12,9 +12,9 @@ This is a mod for ZioMcCall's [Brutal Wolfenstein 3D mod](https://forum.zdoom.or
 
 So basically it's a mod for the sum of two mods, what a wild intersection.
 
-Following weapons are supported: Luger, MP40, STG44, Kar98, MG42, Colt 1911A1, Thompson M1A1, M1 Garand, Winchester M12 Trench Gun.
+Following weapons are supported: Luger, MP40, STG44, Kar98, MG42, Colt 1911A1, Thompson M1A1, M1 Garand, Winchester M12 Trench Gun and the Flamethrower.
 
-..While these weapons were not carried over: All akimbo versions, The Axe, BAR, Chaingun, Knife, Flamethrower, Laser rifle, Panzershreck, PPSH41
+..While these weapons were not carried over: All akimbo versions, all melee weapons, BAR, Chaingun, Laser rifle, Panzershreck, PPSH41
 
 ## Installation and Usage
 

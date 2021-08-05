@@ -1,0 +1,72 @@
+Model Colt				
+{ 
+  Path "Models/1911/"
+  Model 0 "1911.md3"
+  Skin 0 "1911.png"
+  Scale -1.0 1.0 1.0
+  Offset 0.0 0.0 0.0
+  ZOffset -5
+
+  FrameIndex      Z19G    A       0       1
+  FrameIndex      Z19G    B       0       2
+  FrameIndex      Z19G    C       0       3
+  FrameIndex      Z19G    D       0       4
+  FrameIndex      Z19G    E       0       5
+  FrameIndex      Z19G    F       0       6
+  FrameIndex      Z19G    G       0       7
+
+  FrameIndex      Z19S    A       0       8
+  FrameIndex      Z19S    B       0       9
+  FrameIndex      Z19S    C       0       10
+  FrameIndex      Z19S    D       0       11
+  FrameIndex      Z19S    E       0       12
+  FrameIndex      Z19S    F       0       13
+  FrameIndex      Z19S    G       0       14
+  FrameIndex      Z19S    H       0       15
+
+  FrameIndex      Z1R1    A       0       16
+  FrameIndex      Z1R1    B       0       17
+  FrameIndex      Z1R1    C       0       18
+  FrameIndex      Z1R1    D       0       19
+  FrameIndex      Z1R1    E       0       20
+  FrameIndex      Z1R1    F       0       21
+  FrameIndex      Z1R1    G       0       22
+  FrameIndex      Z1R1    H       0       23
+  FrameIndex      Z1R1    I       0       24
+  FrameIndex      Z1R1    J       0       25
+  FrameIndex      Z1R1    K       0       26
+  FrameIndex      Z1R1    L       0       27
+  FrameIndex      Z1R1    M       0       28
+  FrameIndex      Z1R1    N       0       29
+  FrameIndex      Z1R1    O       0       30
+  FrameIndex      Z1R1    P       0       31
+  FrameIndex      Z1R1    Q       0       32
+  FrameIndex      Z1R1    R       0       33
+  FrameIndex      Z1R1    S       0       34
+  FrameIndex      Z1R1    T       0       35
+
+  FrameIndex      Z1R2    A       0       36
+  FrameIndex      Z1R2    B       0       37
+  FrameIndex      Z1R2    C       0       38
+  FrameIndex      Z1R2    D       0       39
+  FrameIndex      Z1R2    E       0       40
+  FrameIndex      Z1R2    F       0       41
+  FrameIndex      Z1R2    G       0       42
+  FrameIndex      Z1R2    H       0       43
+  FrameIndex      Z1R2    I       0       44
+  FrameIndex      Z1R2    J       0       45
+  FrameIndex      Z1R2    K       0       46
+  FrameIndex      Z1R2    L       0       47
+  FrameIndex      Z1R2    M       0       48
+  FrameIndex      Z1R2    N       0       49
+  FrameIndex      Z1R2    O       0       50
+  FrameIndex      Z1R2    P       0       51
+  FrameIndex      Z1R2    Q       0       52
+  FrameIndex      Z1R2    R       0       53
+  FrameIndex      Z1R2    S       0       54
+  FrameIndex      Z1R2    T       0       55
+  FrameIndex      Z1R2    U       0       56
+  FrameIndex      Z1R2    V       0       57
+  FrameIndex      Z1R2    W       0       58
+  FrameIndex      Z1R2    X       0       59
+}

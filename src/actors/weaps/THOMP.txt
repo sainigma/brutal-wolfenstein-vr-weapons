@@ -27,7 +27,7 @@ Actor Thompson:Weapon {
     // ZTR3 A-D remove magazine
     // ZTR3 E-N insert magazine
     // ZTR3 O-T pull charging handle
-    // ZTR3 U-X charging handle reset
+    // ZTR3 U-X charging handle reset <-- improve plz
     // ZTSA A-M, weapon intro
 
     Ready:
@@ -77,6 +77,7 @@ Actor Thompson:Weapon {
       THOG A 0 A_AlertMonsters
       TNT1 A 0 A_FireCustomMissile("SmokeSpawner",0,0,0,5)
       TNT1 A 0 A_FireCustomMissile("YellowFlareSpawn",0,0,0,5)
+      TNT1 A 0 A_FireCustomMissile("ThompsonFlash",0,0,0,0)
       TNT1 A 0 A_PlaySound("weapons/thompson")
       ZTRG B 1 BRIGHT A_FireBullets (3, 4, -1, 15, "HitPuff")
       TNT1 A 0 BRIGHT A_FireCustomMissile("Tracer", 0, 0, -1, 0)
@@ -145,16 +146,6 @@ Actor Thompson:Weapon {
       Tnt1 a 0 a_GiveInventory("ThomAmmo",1)
       TNT1 A 0 A_Takeinventory("Clip",1)
       Goto InsertBullets
-
-    AmmoIn2:
-      Tnt1 a 0 a_GiveInventory("ThomAmmo",1)
-      TNT1 A 0 A_Takeinventory("Clip",1)
-      Goto InsertBullets2
-
-    InsertBullets2:
-      TNT1 A 0 A_JumpIfInventory("ThomAmmo",31,"NOBUG")
-      TNT1 A 0 A_JumpIfInventory("Clip",1,"AmmoIn2")
-      Goto RealReady
 
     Spawn:
       THMP A -1

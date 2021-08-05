@@ -1,0 +1,59 @@
+Model TRGUN				
+{ 
+  Path "Models/Trenchgun/"
+  Model 0 "m12.md3"
+  Skin 0 "m12.png"
+  Scale -1.0 1.0 1.0
+  Offset 0.0 0.0 0.0
+  ZOffset -5
+
+  FrameIndex      ZSGG    A       0       1
+  FrameIndex      ZSGG    B       0       2
+  FrameIndex      ZSGG    C       0       3
+  FrameIndex      ZSGG    D       0       4
+  FrameIndex      ZSGG    E       0       5
+  FrameIndex      ZSGG    F       0       6
+  FrameIndex      ZSGG    G       0       7
+
+  FrameIndex      ZSGS    A       0       8
+  FrameIndex      ZSGS    B       0       9
+  FrameIndex      ZSGS    C       0       10
+  FrameIndex      ZSGS    D       0       11
+  FrameIndex      ZSGS    E       0       12
+  FrameIndex      ZSGS    F       0       13
+  FrameIndex      ZSGS    G       0       14
+  FrameIndex      ZSGS    H       0       15
+  FrameIndex      ZSGS    I       0       16
+  FrameIndex      ZSGS    J       0       17
+  FrameIndex      ZSGS    K       0       18
+  FrameIndex      ZSGS    L       0       19
+  FrameIndex      ZSGS    M       0       20
+  FrameIndex      ZSGS    N       0       21
+  FrameIndex      ZSGS    O       0       22
+
+  FrameIndex      ZSGP    A       0       23
+  FrameIndex      ZSGP    B       0       24
+  FrameIndex      ZSGP    C       0       25
+  FrameIndex      ZSGP    D       0       26
+  FrameIndex      ZSGP    E       0       27
+  FrameIndex      ZSGP    F       0       28
+  FrameIndex      ZSGP    G       0       29
+  FrameIndex      ZSGP    H       0       30
+  FrameIndex      ZSGP    I       0       31
+  FrameIndex      ZSGP    J       0       32
+  FrameIndex      ZSGP    K       0       33
+  FrameIndex      ZSGP    L       0       34
+
+  FrameIndex      ZSGR    A       0       35
+  FrameIndex      ZSGR    B       0       36
+  FrameIndex      ZSGR    C       0       37
+  FrameIndex      ZSGR    D       0       38
+  FrameIndex      ZSGR    E       0       39
+  FrameIndex      ZSGR    F       0       40
+  FrameIndex      ZSGR    G       0       41
+  FrameIndex      ZSGR    H       0       42
+  FrameIndex      ZSGR    I       0       43
+  FrameIndex      ZSGR    J       0       44
+  FrameIndex      ZSGR    K       0       45
+  FrameIndex      ZSGR    L       0       46
+}

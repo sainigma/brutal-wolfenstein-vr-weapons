@@ -8,7 +8,7 @@ Actor TRGUN : Weapon 1492 {
   Weapon.AmmoType2 "TrenchAmmo"
   Inventory.PickUpMessage "Shotgun"
   Inventory.PickUpSound "MP40_Take"
-  Scale 0.5
+  Scale 1
   Weapon.BobRangeX 0.75
   Weapon.BobRangeY 0.5
   Weapon.BobSpeed 1.5
@@ -69,6 +69,7 @@ Actor TRGUN : Weapon 1492 {
       ZSGG B 1 BRIGHT A_FireBullets (4.0, 4.0, 10, 12, "ShotgunPuff")
       TNT1 A 0 A_FireCustomMissile("SmokeSpawner",0,0,0,5)
       TNT1 A 0 A_FireCustomMissile("YellowFlareSpawn",0,0,0,0)
+      TNT1 A 0 A_FireCustomMissile("STG44Flash",0,0,0,0)
       TNT1 A 0 A_Takeinventory("TRENCHAMMO",1)
       TNT1 A 0 A_Recoil(3)
       TNT1 A 0 A_AlertMonsters
@@ -77,12 +78,10 @@ Actor TRGUN : Weapon 1492 {
       Goto Pumping
 
     Pumping:
-      ZSGP ABCDEFGHI 1
-      tnt1 A 0 A_PlaySound("TG/PUMP", 3)
+      TNT1 A 0 A_PlaySound("TG/PUMP", 3)
+      ZSGP ACEGI 1
       TNT1 A 0 A_FireCustomMissile("ShotCaseSpawn",0,0,-4,-4)
-      ZSGP JKL 1
-      ZSGP LL 2
-      ZSGP KJIHGFEDCBA 1 
+      ZSGP JLJHFDA 1 
       Goto RealReady 
 
     AltFire:
@@ -103,7 +102,6 @@ Actor TRGUN : Weapon 1492 {
       
       TNT1 AAA 0
       ZSGP ABCDEFGHI 1
-      ZSGR AB 1
       Goto InsertAmmo
 
     InsertAmmo:
@@ -118,15 +116,16 @@ Actor TRGUN : Weapon 1492 {
 
     ReloadAnimation:
       TNT1 A 0 A_GiveInventory("PumpFirstcheater",1)
-      ZSGR CD 2 A_WeaponReady
-      tnt1 a 0 A_PlayWeaponSound("Trenchgun/Load")
-      ZSGR EFGHIJK 1 A_WeaponReady
-      ZSGR LL 2 A_WeaponReady
+      ZSGR AB 2
+      TNT1 A 0 A_PlayWeaponSound("Trenchgun/Load")
+      ZSGR CDEFGHIJ 1
+      ZSGR KK 2 A_WeaponReady
       Goto InsertAmmo
 
     FinishReload:
-      ZSGP KJIHGFEDCBA 1 
-      TNT1 A 0 A_PlaySound("TG/PUMP", 3)
+      ZSGP LKJIHGFEDCBA 1 
+      TNT1 A 0 A_PlaySound("MG42_click", 3)
+      //TNT1 A 0 A_PlaySound("TG/PUMP", 3)
       TNT1 A 0 A_Takeinventory("Zoomed",1)
       TNT1 A 0 A_Takeinventory("ADSmode",1)
       TNT1 A 0 A_Takeinventory("Meleeattack",1)

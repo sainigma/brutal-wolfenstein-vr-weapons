@@ -22,6 +22,20 @@ THOMP = {
   "ZTR3":[14,40]
 }
 
+TRENCHGUN = {
+  "ZSGG":[1,7],
+  "ZSGS":[8,22],
+  "ZSGP":[23,34],
+  "ZSGR":[35,46]
+}
+
+M1911A1 = {
+  "Z19G":[1,7],
+  "Z19S":[8,15],
+  "Z1R1":[16,35],
+  "Z1R2":[36,59]
+}
+
 def generateFrames(strips):
     for strip in strips:
         j = 65
@@ -30,4 +44,4 @@ def generateFrames(strips):
             j += 1
         print("")
 
-generateFrames(THOMP)
+generateFrames(M1911A1)

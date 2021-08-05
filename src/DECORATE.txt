@@ -5,6 +5,7 @@
 #include "actors/weaps/STG44.txt"
 #include "actors/weaps/MG42.txt"
 #include "actors/weaps/TRENCHGUN.txt"
+#include "actors/weaps/1911.txt"
 
 //PARTICLES
 #include "actors/MuzzleFlash.txt"
