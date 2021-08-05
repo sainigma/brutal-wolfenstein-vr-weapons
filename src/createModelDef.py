@@ -36,6 +36,12 @@ M1911A1 = {
   "Z1R2":[36,59]
 }
 
+GARAND = {
+  "M1GG":[1,10],
+  "M1GS":[11,18],
+  "M1GR":[19,35]
+}
+
 def generateFrames(strips):
     for strip in strips:
         j = 65
@@ -44,4 +50,4 @@ def generateFrames(strips):
             j += 1
         print("")
 
-generateFrames(M1911A1)
+generateFrames(GARAND)

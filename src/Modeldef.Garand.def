@@ -1,0 +1,47 @@
+Model M1GARAND				
+{ 
+  Path "Models/Garand/"
+  Model 0 "garand.md3"
+  Skin 0 "garand.png"
+  Scale -1.0 1.0 1.0
+  Offset 0.0 0.0 0.0
+  ZOffset -5
+  
+  FrameIndex      M1GG    A       0       1
+  FrameIndex      M1GG    B       0       2
+  FrameIndex      M1GG    C       0       3
+  FrameIndex      M1GG    D       0       4
+  FrameIndex      M1GG    E       0       5
+  FrameIndex      M1GG    F       0       6
+  FrameIndex      M1GG    G       0       7
+  FrameIndex      M1GG    H       0       8
+  FrameIndex      M1GG    I       0       9
+  FrameIndex      M1GG    J       0       10
+
+  FrameIndex      M1GS    A       0       11
+  FrameIndex      M1GS    B       0       12
+  FrameIndex      M1GS    C       0       13
+  FrameIndex      M1GS    D       0       14
+  FrameIndex      M1GS    E       0       15
+  FrameIndex      M1GS    F       0       16
+  FrameIndex      M1GS    G       0       17
+  FrameIndex      M1GS    H       0       18
+
+  FrameIndex      M1GR    A       0       19
+  FrameIndex      M1GR    B       0       20
+  FrameIndex      M1GR    C       0       21
+  FrameIndex      M1GR    D       0       22
+  FrameIndex      M1GR    E       0       23
+  FrameIndex      M1GR    F       0       24
+  FrameIndex      M1GR    G       0       25
+  FrameIndex      M1GR    H       0       26
+  FrameIndex      M1GR    I       0       27
+  FrameIndex      M1GR    J       0       28
+  FrameIndex      M1GR    K       0       29
+  FrameIndex      M1GR    L       0       30
+  FrameIndex      M1GR    M       0       31
+  FrameIndex      M1GR    N       0       32
+  FrameIndex      M1GR    O       0       33
+  FrameIndex      M1GR    P       0       34
+  FrameIndex      M1GR    Q       0       35
+}

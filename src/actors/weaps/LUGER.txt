@@ -118,8 +118,7 @@ Actor Luger:Weapon {
       ZLR4 QR 2 
       TNT1 A 0 A_PlayWeaponSound("Close/Reload/Luger")
       ZLR4 ST 3
-      ZLUR IHGFEDCBA 1
-      Goto InsertBullets
+      Goto FinishReload
 
     TacticalReload:
       TNT1 A 0 A_TakeInventory("Reloading",1)
@@ -136,7 +135,10 @@ Actor Luger:Weapon {
       TNT1 a 0 a_playsound("Lug1")
       ZLR2 HI 2 
       TNT1 a 0 A_JumpIfInventory("LugerMagCounter",8,"ReleaseMag")
-      Goto ContinueReload
+      TNT1 a 0 a_playsound("LUG2")
+      ZLR2 JJ 2 
+      ZLR2 KLM 2 
+      Goto FinishReload
 
     InsertBullets:
       TNT1 A 0 A_TakeInventory("Cazzafa2",1)
@@ -156,11 +158,9 @@ Actor Luger:Weapon {
       TNT1 A 0 A_takeInventory("LUGERMagCounter2",1)
       TNT1 A 0 A_FireCustomMissile("MP40EmptyClip",-5,0,8,-4)
 
-    ContinueReload:
-      ZLR2 JJ 2 
-      ZLR2 KLM 2 
-      TNT1 a 0 a_playsound("LUG2")
+    FinishReload:
       ZLUR IHGFEDCBA 1 
+      Goto InsertBullets
 
     Spawn:
       DMST A -1
