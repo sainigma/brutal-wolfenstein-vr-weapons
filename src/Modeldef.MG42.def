@@ -1,4 +1,4 @@
-Model MG42_3D			
+Model MG42				
 { 
   Path "Models/MG42/"
   Model 0 "mg42.md3"

@@ -1,4 +1,4 @@
-Actor M1GARAND_3D:Weapon Replaces M1GARAND {
+Actor M1GARAND:Weapon {
   Weapon.AmmoUse1 0
   Weapon.AmmoGive1 8
   Weapon.AmmoUse2 0
@@ -213,5 +213,26 @@ Actor M1GARAND_3D:Weapon Replaces M1GARAND {
   }
 }
 
+ACTOR m1load : Ammo {
+  Inventory.Amount 0
+  Inventory.MaxAmount 8
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 8
+}
 
+ACTOR m1clip : Ammo {
+  Inventory.PickupSound "pickups/ammo"
+  Inventory.PickupMessage "M1 Garand's clip"
+  Inventory.Amount 8
+  Inventory.MaxAmount 200
+  Ammo.BackpackAmount 16
+  Ammo.BackpackMaxAmount 200
+  Mass 10000
+  Inventory.Icon "MAUSB0"
 
+  States {
+    Spawn:
+      KARM A -1
+      Loop
+  }
+}

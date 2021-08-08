@@ -1,4 +1,4 @@
-Actor STG44_3D:Weapon Replaces STG44 {
+Actor STG44:Weapon Replaces Supershotgun 7033 {
 	Weapon.AmmoUse1 0 
 	Weapon.AmmoUse2 0
 	Weapon.AmmoGive1 10
@@ -208,10 +208,24 @@ Actor STG44_3D:Weapon Replaces STG44 {
 	}
 }
 
-Actor DoubleSTG44_Blocker:WeaponGiver Replaces DoubleSTG44 {
+ACTOR STGAmmo : Ammo {
+   Inventory.Amount 0
+   Inventory.MaxAmount 31
+   Ammo.BackpackAmount 0
+   Ammo.BackpackMaxAmount 31
+}
+
+ACTOR STGMAGCOUNT : Ammo {
+   Inventory.Amount 0
+   Inventory.MaxAmount 30
+   Ammo.BackpackAmount 0
+   Ammo.BackpackMaxAmount 30
+}
+
+Actor DoubleSTG44:WeaponGiver {
   Inventory.PickupMessage "Sturmgewehr 44"
   Inventory.PickUpSound "MP40_Take"
-  DropItem "STG44_3D"
+  DropItem "STG44"
   States {
     Spawn:
 	  STGI A -1

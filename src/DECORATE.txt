@@ -1,15 +1,4 @@
 //WEAPONS
 
-#include "Scripts/Weapons/Luger.txt"
-#include "Scripts/Weapons/1911.txt"
-#include "Scripts/Weapons/MP40.txt"
-#include "Scripts/Weapons/Thompson.txt"
-#include "Scripts/Weapons/Kar98.txt"
-#include "Scripts/Weapons/STG44.txt"
-#include "Scripts/Weapons/M1Garand.txt"
-#include "Scripts/Weapons/Trenchgun.txt"
-#include "Scripts/Weapons/Flammenwerfer.txt"
-#include "Scripts/Weapons/MG42.txt"
-
 //PARTICLES
-#include "Scripts/MuzzleFlash.txt"
+#include "actors/MuzzleFlash.txt"

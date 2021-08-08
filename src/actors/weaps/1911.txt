@@ -1,4 +1,4 @@
-Actor Colt_3D:Weapon Replaces Colt {
+Actor Colt:Weapon Replaces Pistol {
 
   Weapon.AmmoUse1 0
   Weapon.AmmoGive1 7
@@ -251,3 +251,16 @@ Actor Colt_3D:Weapon Replaces Colt {
   }
 }
 
+ACTOR BDPistolAmmoAlt : Ammo {
+  Inventory.Amount 0
+  Inventory.MaxAmount 8
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 8
+}
+
+Actor ColtMagCounter: Ammo {
+  Inventory.Amount 0
+  Inventory.MaxAmount 7
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 7
+}

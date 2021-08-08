@@ -1,4 +1,4 @@
-Model Colt_3D				
+Model Colt				
 { 
   Path "Models/1911/"
   Model 0 "1911.md3"

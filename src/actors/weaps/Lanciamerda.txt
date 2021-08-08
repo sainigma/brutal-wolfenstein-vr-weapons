@@ -1,4 +1,8 @@
-Actor Flamethrower_3D:Weapon Replaces Flamethrower_BW {
+Actor FlamerCounter:inventory {
+  Inventory.MaxAmount 1000
+}
+
+Actor Flamethrower_BW:Weapon Replaces BFG9000 {
   Inventory.PickupSound "mp40_take"
   Inventory.PickupMessage "You got the Flammenwerfer 35"
   Obituary "%o was BBQed by %k' FlameThrower."
@@ -135,5 +139,70 @@ Actor Flamethrower_3D:Weapon Replaces Flamethrower_BW {
 
 		NoAmmoForAxe:
 			Goto RealReady
+  }
+}
+
+ACTOR GAS : Ammo Replaces Cell {
+	Inventory.PickupSound "pickups/ammo"
+	Inventory.PickupMessage ""
+	Inventory.Amount 40
+	Inventory.MaxAmount 1000
+	Ammo.BackpackAmount 40
+	Ammo.BackpackMaxAmount 1000
+	Mass 10000
+  Inventory.Icon "agasA0"
+  
+	States {
+    Spawn:
+      AGAS A -1
+      Loop
+  }
+}
+
+Actor FTFire_2 {
+  Radius 12
+  Height 4
+  Speed 16
+  Damage 1
+  Projectile
+  RenderStyle Add
+  DamageType Fire
+  +DontSplash
+  Alpha 0.67
+  Scale 0.67
+  //SeeSound "Flamethrower/Fire"
+  DeathSound "Flamethrower/Hit"
+
+  States {
+    Spawn:
+      TNT1 A 2
+      OFBU B 0 A_CustomMissile("FlamerBurnParticles", 0, 0, random (0, 360), 2, random (50, 130))
+      OFBU B 0 A_CustomMissile("ExplosionParticleVerySlow", 0, 0, random (0, 360), 2, random (50, 130))
+      FRFX ABCD 2 bright A_Explode(5, 8, 0)
+      OFBU B 0 A_CustomMissile("FlamerBurnParticles", 0, 0, random (0, 360), 2, random (50, 130))
+      OFBU B 0 A_CustomMissile("ExplosionParticleVerySlow", 0, 0, random (0, 360), 2, random (50, 130))
+      TNT1 A 0 A_LowGravity
+      FRFX EFG 2 bright A_Explode(5, 16, 0)
+      OFBU B 0 A_CustomMissile("FlamerBurnParticles", 0, 0, random (0, 360), 2, random (50, 130))
+      OFBU B 0 A_CustomMissile("ExplosionParticleVerySlow", 0, 0, random (0, 360), 2, random (50, 130))
+      FRFX HIJ 2 bright A_Explode(5, 32, 0)
+      OFBU B 0 A_CustomMissile("FlamerBurnParticles", 0, 0, random (0, 360), 2, random (50, 130))
+      OFBU B 0 A_CustomMissile("ExplosionParticleVerySlow", 0, 0, random (0, 360), 2, random (50, 130))
+      TNT1 A 0 A_Gravity
+      FRFX KLM 2 bright A_Explode(5, 64, 0)
+      OFBU B 0 A_CustomMissile("FlamerBurnParticles", 0, 0, random (0, 360), 2, random (50, 130))
+      OFBU B 0 A_CustomMissile("ExplosionParticleVerySlow", 0, 0, random (0, 360), 2, random (50, 130))
+      FRFX NO 2 bright
+      OFBU B 0 A_CustomMissile("FlamerBurnParticles", 0, 0, random (0, 360), 2, random (50, 130))
+      OFBU B 0 A_CustomMissile("ExplosionParticleVerySlow", 0, 0, random (0, 360), 2, random (50, 130))
+      Stop
+      
+    Death:
+      FRFX HIJ 2 bright A_Explode(5, 32, 0)
+      OFBU B 0 A_CustomMissile("FlamerBurnParticles", 0, 0, random (0, 360), 2, random (50, 130))
+      OFBU B 0 A_CustomMissile("ExplosionParticleVerySlow", 0, 0, random (0, 360), 2, random (50, 130))
+      FRFX KLM 2 bright A_Explode(5, 64, 0)
+      FRFX NO 2 bright
+      Stop
   }
 }

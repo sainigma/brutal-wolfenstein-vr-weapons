@@ -1,4 +1,4 @@
-Actor MG42_3D:Weapon Replaces MG42 {
+Actor MG42:Weapon 7034 {
 
 	Weapon.AmmoUse1 0
 	Weapon.AmmoGive1 25
@@ -212,4 +212,16 @@ Actor MG42_3D:Weapon Replaces MG42 {
 	}
 }
 
+ACTOR Mgammo : Ammo {
+   Inventory.Amount 0
+   Inventory.MaxAmount 50
+   Ammo.BackpackAmount 0
+   Ammo.BackpackMaxAmount 50
+}
 
+ACTOR MGMagCounter : Ammo {
+   Inventory.Amount 0
+   Inventory.MaxAmount 50
+   Ammo.BackpackAmount 0
+   Ammo.BackpackMaxAmount 50
+}

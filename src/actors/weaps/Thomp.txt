@@ -1,4 +1,4 @@
-Actor Thompson_3D:Weapon Replaces Thompson {
+Actor Thompson:Weapon {
 
   Weapon.AmmoUse1 0
   Weapon.AmmoGive1 30
@@ -215,4 +215,32 @@ Actor Thompson_3D:Weapon Replaces Thompson {
     NoAmmoForAxe:
       Goto RealReady
   }
+}
+
+ACTOR ThomAmmo : Ammo {
+  Inventory.Amount 0
+  Inventory.MaxAmount 31
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 31
+}
+
+ACTOR TommyMagCounter : Ammo {
+  Inventory.Amount 0
+  Inventory.MaxAmount 30
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 30
+}
+
+ACTOR MeatshieldGunAmmo : Ammo {
+  Inventory.Amount 0
+  Inventory.MaxAmount 30
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 30
+}
+
+ACTOR MeatAmmo : Ammo {
+  Inventory.Amount 0
+  Inventory.MaxAmount 100
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 100
 }

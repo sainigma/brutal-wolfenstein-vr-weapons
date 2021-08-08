@@ -1,4 +1,4 @@
-Model Karabine98_3D
+Model Karabine98
 { 
   Path "Models/Mauser/"
   Model 0 "kar98k.md3"

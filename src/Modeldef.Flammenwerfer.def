@@ -1,4 +1,4 @@
-Model Flamethrower_3D				
+Model Flamethrower_BW			
 { 
   Path "Models/Flammenwerfer/"
   Model 0 "flammenwerfer.md3"

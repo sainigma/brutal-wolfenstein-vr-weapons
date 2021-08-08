@@ -1,4 +1,4 @@
-Actor MP40_3D:Weapon Replaces SecretWeapon_MP40 {
+Actor SecretWeapon_MP40:Weapon Replaces Shotgun {
 
   Weapon.AmmoUse1 0
   Weapon.AmmoUse2 0
@@ -283,7 +283,22 @@ Actor MP40_3D:Weapon Replaces SecretWeapon_MP40 {
   }
 }
 
-ACTOR MP40Spawner_3D:CustomInventory Replaces MP40Spawner {
+ACTOR MPAmmo : Ammo {
+  Inventory.Amount 0
+  Inventory.MaxAmount 32
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 32
+}
+
+
+ACTOR MP40MAGCounter : Ammo {
+  Inventory.Amount 0
+  Inventory.MaxAmount 32
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 32
+}
+
+ACTOR MP40Spawner: CustomInventory 7032 {
   //$Category BW Weapons
   //$Title Mp40 
   radius 10
@@ -309,19 +324,6 @@ ACTOR MP40Spawner_3D:CustomInventory Replaces MP40Spawner {
 
     Pickup:
       TNT1 A 0 A_GiveInventory("SecretWeapon_MP40", 1)
-      Stop
-
-    //Pickup:
-    //  TNT1 A 0
-    //  TNT1 A 0 A_JumpIfInventory("SecretWeapon_MP40", 1, "DualMp40")
-
-    PickupNormal:	
-      TNT1 A 0 A_GiveInventory("SecretWeapon_MP40", 1)
-      Stop
-
-    DualMP40:
-      TNT1 A 0 A_GiveInventory("SecretWeapon_MP40", 1)
-      //TNT1 A 0 A_GiveInventory("MP40Akimbo", 1)
       Stop
   }
 }
