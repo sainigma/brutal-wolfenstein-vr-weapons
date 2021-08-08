@@ -1,4 +1,4 @@
-Model SecretWeapon_MP40				
+Model MP40_3D
 { 
   Path "Models/MP40/"
   Model 0 "mp40.md3"

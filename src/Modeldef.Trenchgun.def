@@ -1,4 +1,4 @@
-Model TRGUN				
+Model Trenchgun_3D
 { 
   Path "Models/Trenchgun/"
   Model 0 "m12.md3"

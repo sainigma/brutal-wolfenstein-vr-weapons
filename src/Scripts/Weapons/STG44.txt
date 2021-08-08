@@ -1,4 +1,4 @@
-Actor STG44:Weapon Replaces Supershotgun 7033 {
+Actor STG44_3D:Weapon Replaces STG44 {
 	Weapon.AmmoUse1 0 
 	Weapon.AmmoUse2 0
 	Weapon.AmmoGive1 10
@@ -13,6 +13,7 @@ Actor STG44:Weapon Replaces Supershotgun 7033 {
 	+WEAPON.NOAUTOFIRE
 	Tag "Sturmgewehr 44"
 	Inventory.Icon "STGBACK"
+  Scale 1.0
 	
 	States {
 		Ready:
@@ -152,36 +153,31 @@ Actor STG44:Weapon Replaces Supershotgun 7033 {
 			TNT1 A 5
 			Goto RealReady
 
-		LaunchGrenade:	
-			TNT1 A 0
-			TNT1 A 0 A_Takeinventory("Zoomed",1)
-			TNT1 A 0 A_ZoomFactor(1.0)
-			TNT1 A 0 A_TakeInventory("LaunchGrenade", 1)
-			TNT1 A 0 A_JumpIfInventory("GrenadeAmmo", 1, 1)
-			Goto NoGrenade
-			NGRA ABCD 2
-			TNT1 A 0 A_playSound("Pick/granate")
-			NGRA DD 2
-			TNT1 A 0 A_Jump(90,2)
-			TNT1 A 0 A_PlaySound("*grenadecall", CHAN_VOICE)
-			 NGRA DEFG 2
-			TNT1 A 0 A_PLaySound ("Launch/granate")
-			TNT1 A 0 A_FireCustomMissile("HandGrenade2", random(-3,3), 1, 0, 0, 0, 0)
-			GRWF STUVW 2 
-			TNT1 A 0 A_TakeInventory("GrenadeAmmo", 1)
-			TNT1 A 1 
-			TNT1 A 0 A_TakeInventory("LaunchGrenade", 1)
-			TNT1 A 0 A_Takeinventory("BWgrenade",1)
-			Goto RealReady
+		LaunchGrenade:
+      TNT1 A 0
+      TNT1 A 0 A_TakeInventory("LaunchGrenade", 1)
+      TNT1 A 0 A_JumpIfInventory("GrenadeAmmo", 1, 1)
+      Goto NoGrenade
 
-		NoGrenade:
-			TNT1 A 0
-			TNT1 A 0 A_Takeinventory("Zoomed",1)
-			TNT1 A 0 A_Takeinventory("ADSmode",1)
-			TNT1 A 0 A_ZoomFactor(1.0)
-			TNT1 A 0 A_Print("No Grenades Left!")
-			TNT1 A 0 A_Takeinventory("BWgrenade",1)
-			Goto RealReady
+      TNT1 A 0 A_playSound("Pick/granate")
+      TNT1 A 0 A_Jump(90,2)
+      TNT1 A 0 A_PlaySound("*grenadecall", CHAN_VOICE)
+
+      TNT1 AAAA 2
+
+      TNT1 A 0 A_PLaySound ("Launch/granate")
+      TNT1 A 0 A_FireCustomMissile("HandGrenade2", random(-3,3), 1, 0, 0, 0, 0)
+      TNT1 A 0 A_TakeInventory("GrenadeAmmo", 1)
+      TNT1 A 1 
+      TNT1 A 0 A_TakeInventory("LaunchGrenade", 1)
+      TNT1 A 0 A_Takeinventory("BWgrenade",1)
+      Goto RealReady
+
+    NoGrenade:
+      TNT1 A 0
+      TNT1 A 0 A_Print("No Grenades Left!")
+      TNT1 A 0 A_Takeinventory("BWgrenade",1)
+      Goto RealReady
 
 		NewMelee:
 			Goto RealReady
@@ -212,25 +208,10 @@ Actor STG44:Weapon Replaces Supershotgun 7033 {
 	}
 }
 
-
-ACTOR STGAmmo : Ammo {
-   Inventory.Amount 0
-   Inventory.MaxAmount 31
-   Ammo.BackpackAmount 0
-   Ammo.BackpackMaxAmount 31
-}
-
-ACTOR STGMAGCOUNT : Ammo {
-   Inventory.Amount 0
-   Inventory.MaxAmount 30
-   Ammo.BackpackAmount 0
-   Ammo.BackpackMaxAmount 30
-}
-
-Actor DoubleSTG44:WeaponGiver {
+Actor DoubleSTG44_Blocker:WeaponGiver Replaces DoubleSTG44 {
   Inventory.PickupMessage "Sturmgewehr 44"
   Inventory.PickUpSound "MP40_Take"
-  DropItem "STG44"
+  DropItem "STG44_3D"
   States {
     Spawn:
 	  STGI A -1

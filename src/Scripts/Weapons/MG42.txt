@@ -1,4 +1,4 @@
-Actor MG42:Weapon 7034 {
+Actor MG42_3D:Weapon Replaces MG42 {
 
 	Weapon.AmmoUse1 0
 	Weapon.AmmoGive1 25
@@ -15,7 +15,7 @@ Actor MG42:Weapon 7034 {
 	+WEAPON.NOAUTOFIRE
 	tag "Maschinengewehr 42"
 	Inventory.Icon "MGBACK"
-	Scale 0.9 
+	Scale 1.0
 	
 	States {
 	
@@ -211,22 +211,5 @@ Actor MG42:Weapon 7034 {
 			Goto RealReady
 	}
 }
-
-
-ACTOR Mgammo : Ammo {
-   Inventory.Amount 0
-   Inventory.MaxAmount 50
-   Ammo.BackpackAmount 0
-   Ammo.BackpackMaxAmount 50
-}
-
-ACTOR MGMagCounter : Ammo {
-   Inventory.Amount 0
-   Inventory.MaxAmount 50
-   Ammo.BackpackAmount 0
-   Ammo.BackpackMaxAmount 50
-}
-
-
 
 

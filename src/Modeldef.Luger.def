@@ -1,4 +1,4 @@
-Model LUGER				
+Model LUGER_3D			
 { 
    Path "Models/Luger/"
    Model 0 "luger.md3"
@@ -7,62 +7,62 @@ Model LUGER
    Offset 0.0 0.0 0.0
    ZOffset -5
 
-FrameIndex	ZLUG	A	0	0
-FrameIndex	ZLUG	B	0	1
-FrameIndex	ZLUG	C	0	2
-FrameIndex	ZLUG	D	0	3
-FrameIndex	ZLUG	E	0	4
-FrameIndex	ZLUG	F	0	5
+  FrameIndex	ZLUG	A	0	0
+  FrameIndex	ZLUG	B	0	1
+  FrameIndex	ZLUG	C	0	2
+  FrameIndex	ZLUG	D	0	3
+  FrameIndex	ZLUG	E	0	4
+  FrameIndex	ZLUG	F	0	5
 
-FrameIndex	ZLR3	A	0	6
-FrameIndex	ZLR3	B	0	7
-FrameIndex	ZLR3	C	0	8
-FrameIndex	ZLR3	D	0	9
-FrameIndex	ZLR3	E	0	10
-FrameIndex	ZLR3	F	0	11
-FrameIndex	ZLR3	G	0	12
-FrameIndex	ZLR3	H	0	13
+  FrameIndex	ZLR3	A	0	6
+  FrameIndex	ZLR3	B	0	7
+  FrameIndex	ZLR3	C	0	8
+  FrameIndex	ZLR3	D	0	9
+  FrameIndex	ZLR3	E	0	10
+  FrameIndex	ZLR3	F	0	11
+  FrameIndex	ZLR3	G	0	12
+  FrameIndex	ZLR3	H	0	13
 
-FrameIndex	ZLR4	A	0	14
-FrameIndex	ZLR4	B	0	15
-FrameIndex	ZLR4	C	0	16
-FrameIndex	ZLR4	D	0	17
-FrameIndex	ZLR4	E	0	18
-FrameIndex	ZLR4	F	0	19
-FrameIndex	ZLR4	G	0	20
-FrameIndex	ZLR4	H	0	21
-FrameIndex	ZLR4	I	0	22
-FrameIndex	ZLR4	J	0	23
-FrameIndex	ZLR4	K	0	24
-FrameIndex	ZLR4	L	0	25
-FrameIndex	ZLR4	M	0	26
+  FrameIndex	ZLR4	A	0	14
+  FrameIndex	ZLR4	B	0	15
+  FrameIndex	ZLR4	C	0	16
+  FrameIndex	ZLR4	D	0	17
+  FrameIndex	ZLR4	E	0	18
+  FrameIndex	ZLR4	F	0	19
+  FrameIndex	ZLR4	G	0	20
+  FrameIndex	ZLR4	H	0	21
+  FrameIndex	ZLR4	I	0	22
+  FrameIndex	ZLR4	J	0	23
+  FrameIndex	ZLR4	K	0	24
+  FrameIndex	ZLR4	L	0	25
+  FrameIndex	ZLR4	M	0	26
 
-FrameIndex	ZLR4	Q	0	27
-FrameIndex	ZLR4	R	0	28
-FrameIndex	ZLR4	S	0	29
-FrameIndex	ZLR4	T	0	30
+  FrameIndex	ZLR4	Q	0	27
+  FrameIndex	ZLR4	R	0	28
+  FrameIndex	ZLR4	S	0	29
+  FrameIndex	ZLR4	T	0	30
 
-FrameIndex	ZLUR	A	0	31
-FrameIndex	ZLUR	B	0	32
-FrameIndex	ZLUR	C	0	33
-FrameIndex	ZLUR	D	0	34
-FrameIndex	ZLUR	E	0	35
-FrameIndex	ZLUR	F	0	36
-FrameIndex	ZLUR	G	0	37
-FrameIndex	ZLUR	H	0	38
-FrameIndex	ZLUR	I	0	39
+  FrameIndex	ZLUR	A	0	31
+  FrameIndex	ZLUR	B	0	32
+  FrameIndex	ZLUR	C	0	33
+  FrameIndex	ZLUR	D	0	34
+  FrameIndex	ZLUR	E	0	35
+  FrameIndex	ZLUR	F	0	36
+  FrameIndex	ZLUR	G	0	37
+  FrameIndex	ZLUR	H	0	38
+  FrameIndex	ZLUR	I	0	39
 
-FrameIndex	ZLR2	A	0	40
-FrameIndex	ZLR2	B	0	41
-FrameIndex	ZLR2	C	0	42
-FrameIndex	ZLR2	D	0	43
-FrameIndex	ZLR2	E	0	44
-FrameIndex	ZLR2	F	0	45
-FrameIndex	ZLR2	G	0	46
-FrameIndex	ZLR2	H	0	47
-FrameIndex	ZLR2	I	0	48
-FrameIndex	ZLR2	J	0	49
-FrameIndex	ZLR2	K	0	50
-FrameIndex	ZLR2	L	0	51
-FrameIndex	ZLR2	M	0	52
+  FrameIndex	ZLR2	A	0	40
+  FrameIndex	ZLR2	B	0	41
+  FrameIndex	ZLR2	C	0	42
+  FrameIndex	ZLR2	D	0	43
+  FrameIndex	ZLR2	E	0	44
+  FrameIndex	ZLR2	F	0	45
+  FrameIndex	ZLR2	G	0	46
+  FrameIndex	ZLR2	H	0	47
+  FrameIndex	ZLR2	I	0	48
+  FrameIndex	ZLR2	J	0	49
+  FrameIndex	ZLR2	K	0	50
+  FrameIndex	ZLR2	L	0	51
+  FrameIndex	ZLR2	M	0	52
 }

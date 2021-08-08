@@ -1,4 +1,4 @@
-Actor Colt:	Weapon Replaces Pistol {
+Actor Colt_3D:Weapon Replaces Colt {
 
   Weapon.AmmoUse1 0
   Weapon.AmmoGive1 7
@@ -19,7 +19,7 @@ Actor Colt:	Weapon Replaces Pistol {
   +WEAPON.NOALERT
   Inventory.Icon "COLTBACK"
   Tag "1911 Handgun"
-  Scale 1
+  Scale 1.0
 
   States {
     // Sprites
@@ -249,20 +249,5 @@ Actor Colt:	Weapon Replaces Pistol {
     NoAmmoForAxe:
       Goto RealReady
   }
-}
-
-
-ACTOR BDPistolAmmoAlt : Ammo {
-  Inventory.Amount 0
-  Inventory.MaxAmount 8
-  Ammo.BackpackAmount 0
-  Ammo.BackpackMaxAmount 8
-}
-
-Actor ColtMagCounter: Ammo {
-  Inventory.Amount 0
-  Inventory.MaxAmount 7
-  Ammo.BackpackAmount 0
-  Ammo.BackpackMaxAmount 7
 }
 

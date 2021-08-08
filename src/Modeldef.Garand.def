@@ -1,4 +1,4 @@
-Model M1GARAND				
+Model M1GARAND_3D			
 { 
   Path "Models/Garand/"
   Model 0 "garand.md3"

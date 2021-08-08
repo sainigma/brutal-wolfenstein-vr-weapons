@@ -3,18 +3,35 @@
 ## Table of Contents
 
 - [Description](#description)
+  - [Supported weapons](#supported-weapons)
 - [Installation and Usage](#installation-and-usage)
 - [Documentation](#further-documentation)
 
 ## Description
 
-This is a mod for ZioMcCall's [Brutal Wolfenstein 3D mod](https://forum.zdoom.org/viewtopic.php?f=19&t=48035) that replaces the weapon sprites with animated 3d models and modifies the weapon scripts for general VR comfort and compatibility with [GZDoomVR](https://github.com/hh79/gzdoomvr) project.
+This is a mod for ZioMcCall's [Brutal Wolfenstein 3D mod](https://forum.zdoom.org/viewtopic.php?f=19&t=48035) that replaces the weapon sprites with animated 3d models. It also modifies the weapon scripts for general VR comfort and compatibility with [GZDoomVR](https://github.com/hh79/gzdoomvr) project.
 
-So basically it's a mod for the sum of two mods, what a wild intersection.
+So basically it's a mod for a mod and a specific gzdoom fork, what a wild intersection.
 
-Following weapons are supported: Luger, MP40, STG44, Kar98, MG42, Colt 1911A1, Thompson M1A1, M1 Garand, Winchester M12 Trench Gun and the Flamethrower.
+### Supported weapons:
 
-..While these weapons were not carried over: All akimbo versions, all melee weapons, BAR, Chaingun, Laser rifle, Panzershreck, PPSH41
+ - [x] P08 Luger /
+ - [x] Colt 1911A1 /
+ - [x] MP40 /
+ - [x] Thompson M1A1 /
+ - [x] Kar98k /
+ - [x] M1 Garand /
+ - [x] STG 44 /
+ - [x] Winchester M12 Trench Gun /
+ - [x] MG-42 /
+ - [ ] Flammenwerfer 41 (WIP)
+ - [ ] Panzershreck (Grenades as placeholder)
+ - [ ] Laser rifle (FmW 41 as placeholder)
+ - [ ] Browning BAR (STG44 as placeholder)
+ - [ ] Chaingun (MG42 as placeholder)
+ - [ ] PPSh-41 (Thompson M1A1 as placeholder)
+
+While some weapons are still missing, the game is fully playable, as the missing guns function as pickups for existing weapons. Akimbo and melee weapons were not ported, as they don't really work in VR imo.
 
 ## Installation and Usage
 

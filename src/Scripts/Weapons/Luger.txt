@@ -1,4 +1,4 @@
-Actor Luger:Weapon {
+Actor Luger_3D:Weapon Replaces Luger {
 
   Weapon.AmmoUse1 0
   Weapon.AmmoGive1 4
@@ -19,7 +19,7 @@ Actor Luger:Weapon {
   +WEAPON.NOALERT
   Tag "Luger P08"
   Inventory.Icon "LUGBACK"
-  Scale 0.9
+  Scale 1.0
   
   States {
     Ready:
@@ -234,21 +234,7 @@ Actor Luger:Weapon {
   }
 }
 
-ACTOR LUGERAmmoAlt : Ammo {
-   Inventory.Amount 0
-   Inventory.MaxAmount 8
-   Ammo.BackpackAmount 0
-   Ammo.BackpackMaxAmount 8
-}
-
-ACTOR LugerMagCounter : Ammo {
-   Inventory.Amount 0
-   Inventory.MaxAmount 8
-   Ammo.BackpackAmount 0
-   Ammo.BackpackMaxAmount 8
-}
-
-ACTOR LugerSpawner: CustomInventory {
+ACTOR LugerSpawner_Alt:CustomInventory Replaces LugerSpawner {
   radius 4
   height 4
   Scale 0.9
@@ -273,7 +259,7 @@ ACTOR LugerSpawner: CustomInventory {
 
     Pickup:
       TNT1 A 0
-      TNT1 A 0 A_GiveInventory("Luger", 1)
+      TNT1 A 0 A_GiveInventory("Luger_3D", 1)
       Stop
   }
 }

@@ -1,4 +1,4 @@
-Actor SecretWeapon_MP40:Weapon Replaces Shotgun {
+Actor MP40_3D:Weapon Replaces SecretWeapon_MP40 {
 
   Weapon.AmmoUse1 0
   Weapon.AmmoUse2 0
@@ -11,10 +11,10 @@ Actor SecretWeapon_MP40:Weapon Replaces Shotgun {
   Inventory.PickUpMessage "Machine Pistole 1940"
   +WEAPON.NOAUTOAIM
   +WEAPON.NOALERT
-  scale 0.5
   tag "Machine Pistole 1940"
   Inventory.Icon "MPBACK"
   +WEAPON.NOAUTOFIRE
+  Scale 1.0
 
   States {
 
@@ -283,22 +283,7 @@ Actor SecretWeapon_MP40:Weapon Replaces Shotgun {
   }
 }
 
-ACTOR MPAmmo : Ammo {
-  Inventory.Amount 0
-  Inventory.MaxAmount 32
-  Ammo.BackpackAmount 0
-  Ammo.BackpackMaxAmount 32
-}
-
-
-ACTOR MP40MAGCounter : Ammo {
-  Inventory.Amount 0
-  Inventory.MaxAmount 32
-  Ammo.BackpackAmount 0
-  Ammo.BackpackMaxAmount 32
-}
-
-ACTOR MP40Spawner: CustomInventory 7032 {
+ACTOR MP40Spawner_3D:CustomInventory Replaces MP40Spawner {
   //$Category BW Weapons
   //$Title Mp40 
   radius 10
@@ -323,12 +308,18 @@ ACTOR MP40Spawner: CustomInventory 7032 {
       Stop
 
     Pickup:
-      TNT1 A 0
-      //TNT1 A 0 A_JumpIfInventory("SecretWeapon_MP40", 1, "DualMp40")
-      PickupNormal:	
       TNT1 A 0 A_GiveInventory("SecretWeapon_MP40", 1)
       Stop
-      DualMP40:
+
+    //Pickup:
+    //  TNT1 A 0
+    //  TNT1 A 0 A_JumpIfInventory("SecretWeapon_MP40", 1, "DualMp40")
+
+    PickupNormal:	
+      TNT1 A 0 A_GiveInventory("SecretWeapon_MP40", 1)
+      Stop
+
+    DualMP40:
       TNT1 A 0 A_GiveInventory("SecretWeapon_MP40", 1)
       //TNT1 A 0 A_GiveInventory("MP40Akimbo", 1)
       Stop

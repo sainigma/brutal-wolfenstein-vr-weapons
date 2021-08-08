@@ -1,4 +1,4 @@
-Model Thompson				
+Model Thompson_3D				
 { 
   Path "Models/Thompson/"
   Model 0 "m1a1.md3"

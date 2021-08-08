@@ -1,4 +1,4 @@
-Model STG44				
+Model STG44_3D		
 { 
   Path "Models/STG44/"
   Model 0 "stg44.md3"

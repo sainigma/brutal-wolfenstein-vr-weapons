@@ -1,0 +1,27 @@
+Model Flamethrower_3D				
+{ 
+  Path "Models/Flammenwerfer/"
+  Model 0 "flammenwerfer.md3"
+  Skin 0 "flammenwerfer.png"
+  Scale -1.0 1.0 1.0
+  Offset 0.0 0.0 0.0
+  ZOffset -5
+
+  FrameIndex      FLMG    A       0       0
+  FrameIndex      FLMG    B       0       1
+
+  FrameIndex      IFLS    A       0       2
+  FrameIndex      IFLS    B       0       3
+  FrameIndex      IFLS    C       0       4
+  FrameIndex      IFLS    D       0       5
+  FrameIndex      IFLS    E       0       6
+  FrameIndex      IFLS    F       0       7
+  FrameIndex      IFLS    G       0       8
+
+  FrameIndex      FLMF    A       0       9
+  FrameIndex      FLMF    B       0       10
+  FrameIndex      FLMF    C       0       11
+  FrameIndex      FLMF    D       0       12
+  FrameIndex      FLMF    E       0       13
+  FrameIndex      FLMF    F       0       14
+}
