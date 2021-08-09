@@ -60,7 +60,7 @@ While some weapons are still missing, the game is fully playable, as the missing
 
 ## Documentation
 
-If anyone else is interested in porting 3d weapons to old gzdoom-mods, here are some pointers: TODO
+If anyone else is interested in porting 3d weapons to old gzdoom-mods, [here are some pointers](./docs/tutorial.md) I wrote based on this project.
 
 ## Links
 

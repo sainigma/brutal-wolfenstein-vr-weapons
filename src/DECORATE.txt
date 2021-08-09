@@ -1,4 +1,5 @@
 //WEAPONS
+#include "actors/weaps/Placeholders.txt"
 
 //PARTICLES
 #include "actors/MuzzleFlash.txt"
