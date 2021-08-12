@@ -3,7 +3,7 @@ addplayerclass Doomer2
 
 weaponsection "Brutal_Doom"
 
-setslot 1 Melee_Attacks
+setslot 1 Melee_Attacks GNOMO AXE2 
 setslot 2 LUGER COLT 
 setslot 3 Thompson SecretWeapon_MP40 
 setslot 4 M1GARAND STG44 

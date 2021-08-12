@@ -221,14 +221,3 @@ ACTOR STGMAGCOUNT : Ammo {
    Ammo.BackpackAmount 0
    Ammo.BackpackMaxAmount 30
 }
-
-Actor DoubleSTG44:WeaponGiver {
-  Inventory.PickupMessage "Sturmgewehr 44"
-  Inventory.PickUpSound "MP40_Take"
-  DropItem "STG44"
-  States {
-    Spawn:
-	  STGI A -1
-      Stop
-  }
-}

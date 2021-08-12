@@ -17,23 +17,23 @@ So basically it's a mod for a mod and a specific gzdoom fork, what a wild inters
 
 ### Supported weapons:
 
- - [x] P08 Luger /
- - [x] Colt 1911A1 /
- - [x] MP40 /
- - [x] Thompson M1A1 /
- - [x] Kar98k /
- - [x] M1 Garand /
- - [x] STG 44 /
- - [x] Winchester M12 Trench Gun /
- - [x] MG-42 /
- - [ ] Flammenwerfer 41 (WIP)
+ - [x] P08 Luger
+ - [x] Colt 1911A1
+ - [x] MP40
+ - [x] Thompson M1A1
+ - [x] Kar98k
+ - [x] M1 Garand
+ - [x] STG 44
+ - [x] Winchester M12 Trench Gun
+ - [x] MG-42
+ - [x] Flammenwerfer 41
  - [ ] Panzershreck (Grenades as placeholder)
  - [ ] Laser rifle (FmW 41 as placeholder)
- - [ ] Browning BAR (STG44 as placeholder)
+ - [ ] Browning BAR (Garand as placeholder)
  - [ ] Chaingun (MG42 as placeholder)
  - [ ] PPSh-41 (Thompson M1A1 as placeholder)
 
-While some weapons are still missing, the game is fully playable, as the missing guns function as pickups for existing weapons. Akimbo and melee weapons were not ported, as they don't really work in VR imo.
+While some weapons are still missing, the game is fully playable, as the missing guns function as pickups for existing weapons. Akimbo and melee weapons were not ported (although melee weapons are still available as sprites), as they don't really work in VR imo.
 
 ## Installation and Usage
 

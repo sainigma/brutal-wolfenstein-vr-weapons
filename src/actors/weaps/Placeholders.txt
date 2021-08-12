@@ -1,0 +1,65 @@
+Actor PanzerShreck_Giver:WeaponGiver Replaces PanzerShreck {
+  Inventory.PickupSound "MP40_TAKE"
+  Inventory.PickupMessage "Picked up grenades"
+  DropItem "GrenadeAmmo"
+  States {
+    Spawn:
+      GRND G -1
+      Stop
+  }
+}
+
+Actor DoubleSTG44_Giver:WeaponGiver Replaces DoubleSTG44 {
+  Inventory.PickupMessage "Sturmgewehr 44"
+  Inventory.PickUpSound "MP40_Take"
+  DropItem "STG44"
+  States {
+    Spawn:
+	  STGI A -1
+      Stop
+  }
+}
+
+Actor RifleLaser_Giver:WeaponGiver Replaces RifleLaser {
+  Inventory.PickupSound "MP40_TAKE"
+  Inventory.PickupMessage "You got the Flammenwerfer 41"
+  DropItem "Flamethrower_BW"
+  States {
+    Spawn:
+      AGAS B -1
+      Stop
+  }
+}
+
+Actor BWGatling_Giver:WeaponGiver Replaces BWGatling {
+  Inventory.PickUpSound "MP40_TAKE"
+	Inventory.PickUpMessage "Maschinengewehr 42"
+  DropItem "MG42"
+  States {
+		Spawn:
+			MGPK A -1
+			Stop
+  }
+}
+
+Actor PPSH41_Giver:WeaponGiver Replaces PPSH41 {
+  Inventory.PickUpSound "Mp40_Take"
+  Inventory.PickUpMessage "Soviet Lend-Lease M1A1 Thompson"
+  DropItem "Thompson"
+  States {
+    Spawn:
+      THMP A -1
+      Stop
+  }
+}
+
+Actor BWBar_Giver:WeaponGiver Replaces BWBar {
+  Inventory.PickupSound "MP40_TAKE"
+  Inventory.Pickupmessage "You got the M1 Garand"
+  DropItem "M1GARAND"
+  States {
+    Spawn:
+      GAPK A -1
+      Stop
+  }
+}
