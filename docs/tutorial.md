@@ -8,6 +8,8 @@
   - [Exporting with Blender 2.79](#exporting-with-blender-2.79)
   - [Modeldef](#modeldef)
 - [Scripting](#scripting)
+  - [Hints](#hints)
+  - [Sample actor](#sample-actor)
 
 # General
 

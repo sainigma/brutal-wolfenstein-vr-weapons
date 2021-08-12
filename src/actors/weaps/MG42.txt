@@ -25,7 +25,11 @@ Actor MG42:Weapon 7034 {
 			Goto RealReady
 
 		RealReady:
+      TNT1 A 0 {
+        Speed = 1.0;
+      }
 			ZMGG A 1 A_WeaponReady
+      TNT1 A 0 A_TakeInventory("FlamerCounter",1000)
 			TNT1 A 0 A_SetCrosshair(0)
 			TNT1 A 0 A_JumpIfInventory("ChangeMelee",1,"NewMelee")
 			TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
@@ -36,6 +40,9 @@ Actor MG42:Weapon 7034 {
 			Loop
 
 		Deselect:
+      TNT1 A 0 {
+        Speed = 1.0;
+      }
 			TNT1 A 0 A_TakeInventory("ChangeMelee",1)
 			TNT1 A 0 A_Takeinventory("Zoomed",1)
 			TNT1 A 0 A_Takeinventory("ADSmode",1)
@@ -52,9 +59,8 @@ Actor MG42:Weapon 7034 {
 			Wait
 
 		Fire:        
-			TNT1 A 0 A_JumpIfInventory("MGAmmo",1,2)
+			TNT1 A 0 A_JumpIfInventory("MGAmmo",1,1)
 			Goto Reload
-			TNT1 A 0 A_JumpIfInventory("Zoomed",1,"Fire2")
 			TNT1 A 0 A_PlaySound("MG42")
 			ZMGG B 1 Bright A_AlertMonsters
 			TNT1 A 0 A_FireBullets(3, 3, 0, 37, "MachineGunBulletPuff", 1)
@@ -67,7 +73,14 @@ Actor MG42:Weapon 7034 {
 			TNT1 A 0 A_GiveInventory("MGMagCounter",1)
 			//TNT1 A 0 A_SetAngle(random(3, -3) + angle)
 			ZMGG C 1 Bright 
-			ZMGG F 1
+			ZMGG F 1 {
+        if (CountInv("FlamerCounter") < 55) {
+          Speed = 0.9832 - 0.0175 * CountInv("FlamerCounter");
+        } else {
+          Speed = 0.1;
+        }
+      }
+      TNT1 A 0 A_GiveInventory("FlamerCounter",15)
 			TNT1 A 0 A_Refire
 			Goto RealReady
 
@@ -79,6 +92,9 @@ Actor MG42:Weapon 7034 {
 			Goto RealReady
 
 		Reload:
+      TNT1 A 0 {
+        Speed = 1.0;
+      }
 			TNT1 A 0 A_ZoomFactor(1.0)
 			TNT1 A 0 A_Takeinventory("Reloading",1)
 			TNT1 A 0 A_Takeinventory("ADSmode",1)

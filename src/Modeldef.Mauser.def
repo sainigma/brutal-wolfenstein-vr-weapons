@@ -7,16 +7,51 @@ Model Karabine98
   Offset 0.0 0.0 0.0
   ZOffset -5
 
-  FrameIndex	ZK9G	A	0	0
-  FrameIndex	ZK9G	B	0	1
-  FrameIndex	ZK9G	C	0	2
-  FrameIndex	ZK9G	D	0	3
-  FrameIndex	ZK9G	E	0	4
-  FrameIndex	ZK9G	F	0	5
+  FrameIndex      ZK9G    A       0       1
+  FrameIndex      ZK9G    B       0       2
+  FrameIndex      ZK9G    C       0       3
+  FrameIndex      ZK9G    D       0       4
+  FrameIndex      ZK9G    E       0       5
+  FrameIndex      ZK9G    F       0       6
 
-  FrameIndex  ZK9R    A   0   6
-  FrameIndex  ZK9R    B   0   7
-  FrameIndex  ZK9R    C   0   8
-  FrameIndex  ZK9R    D   0   9
-  FrameIndex  ZK9R    E   0   10
+  FrameIndex      ZK9R    A       0       7
+  FrameIndex      ZK9R    B       0       8
+  FrameIndex      ZK9R    C       0       9
+  FrameIndex      ZK9R    D       0       10
+  FrameIndex      ZK9R    E       0       11
+
+  FrameIndex      ZKR2    A       0       12
+  FrameIndex      ZKR2    B       0       13
+  FrameIndex      ZKR2    C       0       14
+  FrameIndex      ZKR2    D       0       15
+  FrameIndex      ZKR2    E       0       16
+  FrameIndex      ZKR2    F       0       17
+  FrameIndex      ZKR2    G       0       18
+  FrameIndex      ZKR2    H       0       19
+  FrameIndex      ZKR2    I       0       20
+  FrameIndex      ZKR2    J       0       21
+  FrameIndex      ZKR2    K       0       22
+  FrameIndex      ZKR2    L       0       23
+  FrameIndex      ZKR2    M       0       24
+  FrameIndex      ZKR2    N       0       25
+  FrameIndex      ZKR2    O       0       26
+  FrameIndex      ZKR2    P       0       27
+
+  FrameIndex      ZKR1    A       0       28
+  FrameIndex      ZKR1    B       0       29
+  FrameIndex      ZKR1    C       0       30
+  FrameIndex      ZKR1    D       0       31
+  FrameIndex      ZKR1    E       0       32
+  FrameIndex      ZKR1    F       0       33
+  FrameIndex      ZKR1    G       0       34
+
+  FrameIndex      ZK9S    A       0       35
+  FrameIndex      ZK9S    B       0       36
+  FrameIndex      ZK9S    C       0       37
+  FrameIndex      ZK9S    D       0       38
+  FrameIndex      ZK9S    E       0       39
+  FrameIndex      ZK9S    F       0       40
+  FrameIndex      ZK9S    G       0       41
+  FrameIndex      ZK9S    H       0       42
+  FrameIndex      ZK9S    I       0       43
 }

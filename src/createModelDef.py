@@ -48,6 +48,14 @@ FMW41 = {
   "FLMF":[9,14]
 }
 
+KAR98 = {
+  "ZK9G":[1,6],
+  "ZK9R":[7,11],
+  "ZKR2":[12,27],
+  "ZKR1":[28,34],
+  "ZK9S":[35,43]
+}
+
 def generateFrames(strips):
   for strip in strips:
     j = 65
@@ -56,4 +64,4 @@ def generateFrames(strips):
       j += 1
     print("")
 
-generateFrames(FMW41)
+generateFrames(KAR98)

@@ -1,11 +1,13 @@
 # Brutal Wolfenstein VR Weapons mod
 
+![GitHub Logo](/docs/titlecard.png)
+
 ## Table of Contents
 
 - [Description](#description)
   - [Supported weapons](#supported-weapons)
 - [Installation and Usage](#installation-and-usage)
-- [Documentation](#further-documentation)
+- [Documentation](#documentation)
 
 ## Description
 
@@ -62,6 +64,18 @@ While some weapons are still missing, the game is fully playable, as the missing
 
 If anyone else is interested in porting 3d weapons to old gzdoom-mods, [here are some pointers](./docs/tutorial.md) I wrote based on this project.
 
+## Credits
+
+GZDoomVR by a lot of people, latest release by hh79
+
+Original Brutal Wolfenstein 3D mod and weapon scripts by ZMC
+
+Script modifications for VR, weapon models, textures and animations by me.
+
 ## Links
 
 [Brutal Doom VR Weapons](https://github.com/ajantaju/br_vr) by ajantaju, a similar project that supports Brutal Doom, Brutal Doom 64 and Heretic
+
+[Showcase for the german weapons]() at Artstation
+
+[Showcase for the US weapons]() at Artstation
