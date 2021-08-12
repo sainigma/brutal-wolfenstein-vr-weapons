@@ -63,7 +63,7 @@ Actor Karabine98:Weapon 7035 {
       TNT1 A 0 A_PlaySound("weapons/kar98", 1)
       TNT1 A 0 A_FireCustomMissile("SmokeSpawner",0,0,0,5)
       TNT1 A 0 A_FireCustomMissile("YellowFlareSpawn",0,0,0,0)
-      TNT1 A 0 A_FireCustomMissile("RifleFlash",0,0,0,0)
+      TNT1 A 0 A_FireCustomMissile("MauserFlash",0,0,0,0)
       TNT1 A 0 A_Takeinventory("karabineAmmo",1)
       ZK9G B 1 Bright 
       TNT1 A 0 A_FireBullets(2,3,0,40,"RiflePuff")

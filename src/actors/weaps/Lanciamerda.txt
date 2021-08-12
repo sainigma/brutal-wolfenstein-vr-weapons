@@ -75,6 +75,7 @@ Actor Flamethrower_BW:Weapon Replaces BFG9000 {
       FLMF F 1 {
         if (CountInv("FlamerCounter") > 5) {
           if (CountInv("FlamerCounter") > 10) {
+            A_FireCustomMissile("FlamethrowerFlash",0,0,0,0);
             if (CountInv("FlamerCounter") < 55) {
               Speed = 0.9832 - 0.0175 * CountInv("FlamerCounter");
             }

@@ -126,9 +126,10 @@ Actor Thompson:Weapon {
       TNT1 A 0 A_JumpIfInventory("ThomAmmo",1,"TacticalReload")
 
       ZTR3 OPQ 2
-      ZTR3 RST 3
+      ZTR3 RSS 3
       TNT1 A 0 A_PLAYSOUND("GESOO")
-      ZTR3 UVWX 3
+      ZTR3 TUVVVWX 1
+      ZTR3 SRQPO 1
       
       Goto FinishReload
 

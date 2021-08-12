@@ -99,7 +99,7 @@ Actor Colt:Weapon Replaces Pistol {
       TNT1 A 0 A_Takeinventory("BDPistolAmmoAlt",1)
       TNT1 A 0 A_GiveInventory("ColtMagCounter",1)
       TNT1 A 0 A_SetPitch(pitch - 0.6)
-      TNT1 A 0 A_FireCustomMissile("LugerFlash",0,0,0,0)
+      TNT1 A 0 A_FireCustomMissile("PistolFlash",0,0,0,0)
       Z19G C 1 
       TNT1 A 0 A_FireCustomMissile("RifleCaseSpawn",5,0,8,-9)
       TNT1 A 0 A_JumpIfInventory("BDPistolAmmoAlt",1,1)

@@ -19,7 +19,8 @@ MG42 = {
 THOMP = {
   "ZTRG":[1,5],
   "ZTR2":[6,13],
-  "ZTR3":[14,40]
+  "ZTR3":[14,39],
+  "ZTSA":[40,52]
 }
 
 TRENCHGUN = {
@@ -60,8 +61,8 @@ def generateFrames(strips):
   for strip in strips:
     j = 65
     for i in range(strips[strip][0], strips[strip][1] + 1):
-      print("\tFrameIndex\t{0}\t{1}\t0\t{2}".format(strip, chr(j), i))
+      print("  FrameIndex\t{0}\t{1}\t0\t{2}".format(strip, chr(j), i))
       j += 1
     print("")
 
-generateFrames(KAR98)
+generateFrames(THOMP)

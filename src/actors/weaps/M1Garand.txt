@@ -99,7 +99,7 @@ Actor M1GARAND:Weapon {
       TNT1 A 0 A_PlaySound("Weapons/Garand")
       TNT1 A 0 A_FireCustomMissile("SmokeSpawner",0,0,0,5)
       TNT1 A 0 A_FireCustomMissile("YellowFlareSpawn",0,0,0,0)
-      TNT1 A 0 A_FireCustomMissile("RifleFlash",0,0,0,0)
+      TNT1 A 0 A_FireCustomMissile("GarandFlash",0,0,0,0)
       TNT1 A 0 A_Takeinventory("M1LOAD",1)
       M1GG B 1 Bright 
       TNT1 A 0 A_FireBullets(4,5,0,30,"RiflePuff")
