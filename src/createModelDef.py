@@ -8,12 +8,12 @@ STG44 = {
 }
 
 MG42 = {
-  "ZMGS":[1,12],
-  "ZMGG":[13,18],
-  "ZMGR":[19,30],
-  "ZGR0":[31,47],
-  "ZGR1":[48,73],
-  "ZGR2":[74,97]
+  "ZMGS":[1,11],
+  "ZMGG":[12,17],
+  "ZMGR":[18,29],
+  "ZGR0":[30,46],
+  "ZGR1":[47,72],
+  "ZGR2":[73,96]
 }
 
 THOMP = {
@@ -28,6 +28,15 @@ TRENCHGUN = {
   "ZSGS":[8,22],
   "ZSGP":[23,34],
   "ZSGR":[35,46]
+}
+
+LUGER = {
+  "ZLUG":[0,5],
+  "ZLR3":[6,13],
+  "ZLR4":[14,30],
+  "ZLUR":[31,39],
+  "ZLR2":[40,52],
+  "ZLUS":[53,60]
 }
 
 M1911A1 = {
@@ -65,4 +74,4 @@ def generateFrames(strips):
       j += 1
     print("")
 
-generateFrames(THOMP)
+generateFrames(MG42)

@@ -60,7 +60,7 @@ Actor MG42:Weapon 7034 {
 
 		Fire:        
 			TNT1 A 0 A_JumpIfInventory("MGAmmo",1,1)
-			Goto Reload
+			Goto Autoreload
 			TNT1 A 0 A_PlaySound("MG42")
 			ZMGG B 1 Bright A_AlertMonsters
 			TNT1 A 0 A_FireBullets(3, 3, 0, 37, "MachineGunBulletPuff", 1)
@@ -83,7 +83,20 @@ Actor MG42:Weapon 7034 {
 			TNT1 A 0 A_Refire
 			Goto RealReady
 
+    Autoreload:
+      TNT1 A 0 {
+        return A_JumpIf(GetCVar("sv_autoreload"),"Reload");
+      }
+      TNT1 A 0 A_JumpIfInventory("MGAmmoReserve",1,2)
+      TNT1 A 0 A_Print("No ammo!")
+      Goto RealReady
+
+      TNT1 A 0 A_Print("Reload!")
+      TNT1 A 0 A_PlaySound("MAGPICK1")
+      Goto RealReady
+
 		NoAmmo:
+      TNT1 A 0 A_Print("No ammo!")
 			TNT1 A 0 A_PlaySound("Weapons/Empty")
 			TNT1 A 0 A_Takeinventory("Zoomed",1)
 			TNT1 A 0 A_ZoomFactor(1.0)

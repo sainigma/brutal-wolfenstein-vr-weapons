@@ -36,17 +36,6 @@ Actor SecretWeapon_MP40:Weapon Replaces Shotgun {
       PISG A 0 A_JumpIfInventory("Taunting",1,"Taunt")
       Loop
 
-    Ready2:
-      ZMP2 A 1 A_WeaponReady 
-      TNT1 A 0 A_SetCrosshair(5)
-      TNT1 A 0 A_JumpIfInventory("ChangeMelee",1,"NewMelee")
-      TNT1 A 0 A_JumpIfInventory("Meleeattack",1,"KnifeAttack")
-      TNT1 A 0 A_JumpIfInventory("bwgrenade",1,"LaunchGrenade")
-      TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
-      TNT1 A 0 A_JumpIfInventory("Reloading",1,"Reload")
-      PISG A 0 A_JumpIfInventory("Taunting",1,"Taunt")
-      Loop
-
     Deselect:
       tnt1 a 0 a_takeInventory("ChangeMelee",1)
       TNT1 A 0 A_Takeinventory("Zoomed",1)
@@ -64,9 +53,9 @@ Actor SecretWeapon_MP40:Weapon Replaces Shotgun {
       Wait
 
     Fire:
-      TNT1 A 0 A_JumpIfInventory("Zoomed",1,"Fire2")
       TNT1 A 0 A_JumpIfInventory("MPAmmo",1,1)
-      Goto Reload
+      Goto Autoreload
+
       TNT1 A 0 A_PlaySound("MP40")
       TNT1 A 0 A_Takeinventory("MPAmmo",1)
       TNT1 A 0 A_TakeInventory("mp40ammoright",1)
@@ -85,49 +74,32 @@ Actor SecretWeapon_MP40:Weapon Replaces Shotgun {
       TNT1 A 0 A_Refire
       Goto RealReady
 
-    Fire2:
-      TNT1 A 0 A_JumpIfInventory("MPAmmo",1,1)
-      Goto Reload
-      TNT1 A 0 A_PlaySound("MP40")
-      TNT1 A 0 A_Takeinventory("MPAmmo",1)
-      TNT1 A 0 A_TakeInventory("MP40X2AMMO",1)
-      TNT1 A 0 A_TakeInventory("mp40ammoright",1)
-      TNT1 A 0 A_GiveInventory("MP40MAGCounter2",1)
-      TNT1 A 0 A_GiveInventory("MP40MAGCounter",1)
-      TNT1 A 0 A_FireCustomMissile("SmokeSpawner",0,0,0,5)
-      TNT1 A 0 A_FireCustomMissile("YellowFlareSpawn",-5,0,0,0)
-      ZMP2 B 1 BRIGHT A_AlertMonsters
-      TNT1 A 0 A_FireBullets (2, 1, -1, 12, "HitPuff")
-      TNT1 A 0 A_SetPitch(pitch - 0.1)
-      //TNT1 A 0 A_FireCustomMissile("ShakeYourAss", 0, 0, 0, 0)
-      ZMP2 CD 1 
-      MP40 D 0 A_FireCustomMissile("RifleCaseSpawn",-5,0,8,-4)
-      ZMP2 EF 1 
-      TNT1 A 0 A_Refire
-      Goto Ready2
+    Autoreload:
+      TNT1 A 0 {
+        return A_JumpIf(GetCVar("sv_autoreload"),"Reload");
+      }
+      TNT1 A 0 A_JumpIfInventory("WolfClip",1,2)
+      TNT1 A 0 A_Print("No ammo!")
+      Goto RealReady
+
+      TNT1 A 0 A_Print("Reload!")
+      TNT1 A 0 A_PlaySound("MAGPICK1")
+      Goto RealReady
 
     AltFire:
-      TNT1 A 0 A_JumpIfInventory("Zoomed",1,"UnZoom")
-      TNT1 A 0 A_Giveinventory("Zoomed",1)
-      TNT1 A 0 A_ZoomFactor(1.7)
-      TNT1 A 0 A_Giveinventory("ADSmode",1)
-      ZMPX ABCDEF 1 
-      Goto Ready2
+      Goto RealReady
 
     UnZoom:
-      TNT1 A 0 A_Takeinventory("Zoomed",1)
-      TNT1 A 0 A_ZoomFactor(1.0)
-      TNT1 A 0 A_Takeinventory("ADSmode",1)
-      ZMPX FEDCBA 1 
       Goto RealReady
 
     NoAmmo:
+      TNT1 A 0 A_Print("No ammo!")
+      TNT1 A 0 A_PlaySound("Weapons/Empty")
       TNT1 A 0 A_Takeinventory("Zoomed",1)
       TNT1 A 0 A_ZoomFactor(1.0)
       Goto realReady
 
     Reload:
-      TNT1 A 0 A_JumpIfInventory("MPAmmo",1,"Reload2")
       TNT1 A 0 A_TakeInventory("Reloading",1)
       TNT1 A 0 A_TakeInventory("ADSmode",1)
       TNT1 A 0 A_TakeInventory("Zoomed",1)
@@ -151,7 +123,6 @@ Actor SecretWeapon_MP40:Weapon Replaces Shotgun {
       ZMR1 MNO 3
       TNT1 A 0 A_PlayWeaponSound("COCKEN")
       ZMR1 PQRST 3
-      ZMR1 A 2
       ZMPR IHGFEDCBA 1 
 
     InsertBullets:
@@ -199,7 +170,6 @@ Actor SecretWeapon_MP40:Weapon Replaces Shotgun {
       ZMR1 K 2
       ZMR1 LLLLL 2
       ZMPR IHGFEDCBA 1 
-
 
     InsertBullets2:
       TNT1 AAAA 0

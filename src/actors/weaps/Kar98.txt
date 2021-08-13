@@ -57,7 +57,7 @@ Actor Karabine98:Weapon 7035 {
     Fire:
       TNT1 A 0 A_Takeinventory("Reloading",1)
       TNT1 A 0 A_JumpIfInventory("karabineAmmo",1,1)
-      Goto Reload
+      Goto Autoreload
       TNT1 AAAA 0
       TNT1 A 0 A_AlertMonsters
       TNT1 A 0 A_PlaySound("weapons/kar98", 1)
@@ -71,6 +71,18 @@ Actor Karabine98:Weapon 7035 {
       ZK9G CDEF 1
       ZK9G FFF 1
       Goto CycleAction
+
+    Autoreload:
+      TNT1 A 0 {
+        return A_JumpIf(GetCVar("sv_autoreload"),"Reload");
+      }
+      TNT1 A 0 A_JumpIfInventory("MauserClip",1,2)
+      TNT1 A 0 A_Print("No ammo!")
+      Goto RealReady
+
+      TNT1 A 0 A_Print("Reload!")
+      TNT1 A 0 A_PlaySound("MAGPICK1")
+      Goto RealReady
 
     CycleAction:
       TNT1 A 0 A_PlaySound("QUAKER", 3)
@@ -142,6 +154,8 @@ Actor Karabine98:Weapon 7035 {
       Goto RealReady
 
     NoAmmo:
+      TNT1 A 0 A_Print("No ammo!")
+      TNT1 A 0 A_PlaySound("Weapons/Empty")
       TNT1 A 0 A_Takeinventory("Zoomed",1)
       TNT1 A 0 A_ZoomFactor(1.0)
       TNT1 A 0 A_Takeinventory("ADSmode",1)
