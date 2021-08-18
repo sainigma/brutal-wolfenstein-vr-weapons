@@ -1,1 +1,1 @@
-gzdoom.exe -file ZMC-BWFinal.pk3 BW-VR-Weapons.zip +set sv_autoreload 0
+gzdoom.exe -file ZMC-BWFinal.pk3 BW-VR-Weapons.pk3 +set sv_autoreload 0
