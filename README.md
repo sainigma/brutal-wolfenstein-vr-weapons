@@ -57,7 +57,10 @@ While some weapons are still missing, the game is fully playable, as the missing
     ├── DOOM2.WAD
     └── ...
 
-  5. Run brutal-wolfenstein-vr-weapons.bat, start the game from launcher with Doom2 selected, set reload and grenade keybinds in in-game settings, play
+  5. Run brutal-wolfenstein-vr-weapons.bat, start the game from launcher with Doom2 selected
+  6. In VR options, set floor offset to your liking. Modify weapon rotate setting based on your HMD (I used -52 degrees with Oculus Rift S)
+  7. Check that you have all the keybindings set, including reload and grenade.
+  8. Play!
 
   Note. Autoreload is disabled by default. To enable it, edit brutal-wolfenstein-vr-weapons.bat and set sv_autoreload to 1.
 
